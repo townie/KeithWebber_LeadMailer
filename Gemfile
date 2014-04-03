@@ -12,6 +12,11 @@ source 'https://rubygems.org'
 
   # Authentication
   gem 'devise'
+  gem 'cancan'
+  gem 'omniauth'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  gem 'omniauth-linkedin'
 
   # Front end UI gems
   gem 'simple_form'
@@ -20,6 +25,9 @@ source 'https://rubygems.org'
   # User input validation gems for phone and email
   gem 'email_validator'
   gem 'phonelib'
+
+  # Email related gems
+  gem 'mail'
 
   group :doc do
     gem 'sdoc', require: false

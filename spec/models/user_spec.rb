@@ -11,11 +11,13 @@ describe User do
 
     it "requires a valid phone number" do
       phone = FactoryGirl.build(:user, phone_number_primary: "98765678987656789098765")
-
       expect(phone.valid?).to be_false
+      expect(phone.errors[:phone_number_primary]).to include "is invalid"
 
+      phone = FactoryGirl.build(:user, phone_number_primary: "718 272 340")
+      expect(phone.valid?).to be_false
+      expect(phone.errors[:phone_number_primary]).to include "is invalid"
     end
-
 
     it "requires a valid email"do
       email = FactoryGirl.build(:user, email: nil)
