@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   devise :omniauthable, :omniauth_providers => [:linkedin]
+  has_many :identities
 
   TEMP_EMAIL = 'change@me.com'
   TEMP_EMAIL_REGEX = /change@me.com/
@@ -25,7 +26,7 @@ class User < ActiveRecord::Base
 
       # Get the existing user from email if the OAuth provider gives us an email
       user = User.where(:email => auth.info.email).first if auth.info.email
-
+binding.pry
       # Create the user if it is a new registration
       if user.nil?
         user = User.new(
