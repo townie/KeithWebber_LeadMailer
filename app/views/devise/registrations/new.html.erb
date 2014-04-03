@@ -4,13 +4,17 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :company %>
+    <%= f.input :phone_number_primary %>
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true %>
-    <%= f.input :password_confirmation, required: true %>
+
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Start For Free" %>
   </div>
 <% end %>
 
