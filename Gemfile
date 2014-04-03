@@ -10,6 +10,7 @@ source 'https://rubygems.org'
   gem 'turbolinks'
   gem 'jbuilder', '~> 1.2'
 
+
   # Authentication
   gem 'devise'
   gem 'cancan'
@@ -43,6 +44,7 @@ source 'https://rubygems.org'
     gem 'factory_girl_rails'
     gem 'shoulda'
     gem 'railroady'
+    gem 'dotenv-rails'
   end
 
   group :test do

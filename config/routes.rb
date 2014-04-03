@@ -1,10 +1,14 @@
 LeadMailer::Application.routes.draw do
 
-  devise_for :users
+  # devise_for :users
 
   root to: "pages#index"
 
+  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' }
 
+
+
+ # get "/users/auth/linkedin/callback", to: "users/omniauth_callbacks"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

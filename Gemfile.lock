@@ -52,6 +52,9 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    dotenv (0.10.0)
+    dotenv-rails (0.10.0)
+      dotenv (= 0.10.0)
     email_validator (1.4.0)
       activemodel
     erubis (2.7.0)
@@ -214,6 +217,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   devise
+  dotenv-rails
   email_validator
   factory_girl_rails
   foundation-rails
