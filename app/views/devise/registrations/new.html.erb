@@ -4,6 +4,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+  <%= link_to "Sign in with Linked In", user_omniauth_authorize_path(:linkedin) %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :company %>

@@ -10,8 +10,14 @@ source 'https://rubygems.org'
   gem 'turbolinks'
   gem 'jbuilder', '~> 1.2'
 
+
   # Authentication
   gem 'devise'
+  gem 'cancan'
+  gem 'omniauth'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  gem 'omniauth-linkedin'
 
   # Front end UI gems
   gem 'simple_form'
@@ -20,6 +26,9 @@ source 'https://rubygems.org'
   # User input validation gems for phone and email
   gem 'email_validator'
   gem 'phonelib'
+
+  # Email related gems
+  gem 'mail'
 
   group :doc do
     gem 'sdoc', require: false
@@ -35,6 +44,7 @@ source 'https://rubygems.org'
     gem 'factory_girl_rails'
     gem 'shoulda'
     gem 'railroady'
+    gem 'dotenv-rails'
   end
 
   group :test do
