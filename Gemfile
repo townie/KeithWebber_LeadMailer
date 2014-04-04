@@ -13,10 +13,8 @@ source 'https://rubygems.org'
 
   # Authentication
   gem 'devise'
-  gem 'cancan'
+  gem 'cancancan'
   gem 'omniauth'
-  gem 'omniauth-twitter'
-  gem 'omniauth-facebook'
   gem 'omniauth-linkedin'
 
   # Front end UI gems

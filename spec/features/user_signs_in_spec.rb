@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'User Signs Up', %q{
+feature 'User Signs In', %q{
   As a visitor
   I want to be able to sign up for an account with MINIMAL INFO
   so that I can start sending emails RIGHT AWAY to my contacts
