@@ -50,5 +50,29 @@ describe User do
     end
   end
 
+  context "Using LinkedIn omniAuth" do
+
+    before do
+      OmniAuth.config.test_mode = true
+      request.env["devise.mapping"] = Devise.mappings[:user]
+      request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:linkedin]
+      OmniAuth.config.on_failure = Proc.new { |env|
+        OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+      }
+    end
+
+    it {should have_many(:identities)}
+
+    # it "Creates a user if no user with match creds is present"
+
+    # it "Creates an assoication with a user when there is a user present"
+
+    # it "finds the correct user"
+
+
+
+
+  end
+
 
 end
