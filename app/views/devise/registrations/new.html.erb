@@ -4,13 +4,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  <%= link_to "Sign in with Linked In", user_omniauth_authorize_path(:linkedin) %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :company %>
-    <%= f.input :phone_number_primary %>
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true %>
+  <%= link_to "Sign up with LinkedIn", user_omniauth_authorize_path(:linkedin) %>
+    <%= f.input :first_name,  autofocus: true %>
+    <%= f.input :last_name,   required: true  %>
+    <%= f.input :company,     required: true  %>
+    <%= f.input :phone_number_primary, required: true  %>
+    <%= f.input :email,       required: true %>
+    <%= f.input :password,    required: true %>
 
   </div>
 

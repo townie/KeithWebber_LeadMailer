@@ -10,4 +10,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
+
+  def failed
+    flash[:notice] = "Authentication Failed"
+    redirect_to root_path
+  end
 end

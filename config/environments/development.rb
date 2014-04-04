@@ -1,5 +1,9 @@
 LeadMailer::Application.configure do
 
+  OmniAuth.config.on_failure = Proc.new { |env|
+  OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+}
+
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.perform_deliveries = true
   # config.action_mailer.default_url_options = { :host => config.app_domain }

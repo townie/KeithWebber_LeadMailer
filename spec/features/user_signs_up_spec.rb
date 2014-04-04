@@ -11,10 +11,10 @@ feature 'User Signs Up', %q{
   # *Sign up page with first, last name, email, company and phone number
   # *once that information is entered I will be promoted for more info
   # *Redirected to home page
-  context "Regular Sign In" do
+  context "Regular Sign up" do
     scenario "Sign up page creates a new user" do
-      prev_count = User.count
-      user = FactoryGirl.build(:user)
+      prev_count =  User.count
+      user       =  FactoryGirl.build(:user)
 
       sign_up_as_regular(user)
 
@@ -41,25 +41,33 @@ feature 'User Signs Up', %q{
   context "User signs up with LinkedIn profile" do
 
   before do
-    OmniAuth.config.test_mode = true
-    OmniAuth.config.on_failure = Proc.new { |env|
+    OmniAuth.config.test_mode   =   true
+    OmniAuth.config.on_failure  =  Proc.new { |env|
       OmniAuth::FailureEndpoint.new(env).redirect_to_failure
     }
   end
 
     scenario "Sign up page has link to sign in with LinkedIn" do
       OmniAuth.config.add_mock :linkedin, uid: "12345", :extra => {:raw_info => {firstName: "Keith", lastName: "Webber" }}
-
       prev_count = User.count
 
       visit new_user_registration_path
-
-      expect(page).to have_content("Sign in with Linkedin")
-      click_on "Sign in with Linkedin"
+      click_on "Sign up with LinkedIn"
 
       expect(page).to have_content("Successfully authenticated from Linkedin account.")
       expect(User.count).to eq(prev_count + 1)
+      expect(User.last.first_name).to eq("Keith")
     end
 
+    scenario 'fails to do so when authentication fails' do
+      OmniAuth.config.mock_auth[:linkedin] = :twitter
+      prev_count = User.count
+
+      visit new_user_registration_path
+      click_on "Sign in with Linkedin"
+
+      expect(page).to have_content("Authentication Failed")
+      expect(User.count).to eq(prev_count)
+    end
   end
 end

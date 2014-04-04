@@ -1,7 +1,9 @@
 class Identity < ActiveRecord::Base
   belongs_to :user
 
-  validates_presence_of :user_id, :uid, :provider
+  validates :user_id,            presence: true
+  validates :uid,                presence: true
+  validates :provider,           presence: true
   validates_uniqueness_of :uid, :scope => :provider
 
   def self.find_for_oauth(auth)
