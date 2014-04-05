@@ -20,6 +20,10 @@
       @contacts = Contact.all
     end
 
+    def callbacks
+      binding.pry
+    end
+
     protected
 
     def contact_params
