@@ -25,14 +25,20 @@ feature 'Upload Contacts', %q{
     visit new_contact_path
   end
 
-
   scenario "A user can upload a new contact" do
-
     fill_in "Email", with: "test@stuff.com"
-
     click_on "Add new contact"
 
     expect(page).to have_content("test@stuff.com added")
+  end
+
+  scenario "Contact uploaded and a user can see their contacts" do
+    fill_in "Email", with: "test@stuff.com"
+    click_on "Add new contact"
+
+    visit contacts_path
+
+    expect(page).to have_content("test@stuff.com")
 
   end
 

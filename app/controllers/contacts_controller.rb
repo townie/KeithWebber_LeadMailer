@@ -12,6 +12,10 @@ class ContactsController < ApplicationController
     end
   end
 
+  def index
+    @contacts = Contact.all
+  end
+
   protected
 
   def contact_params
