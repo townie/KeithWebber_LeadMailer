@@ -1,0 +1,10 @@
+
+ <%= link_to "Create new contact", new_users_contact_path %>
+
+<% if @contacts.count > 0 %>
+  <ul>
+  <% @contacts.each do |contact| %>
+    <li><%= contact.email %></li>
+  <% end %>
+  </ul>
+<% end %>

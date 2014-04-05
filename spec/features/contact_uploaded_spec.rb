@@ -22,7 +22,7 @@ feature 'Upload Contacts', %q{
     fill_in 'Password', with: user.password
     click_on 'Sign in'
 
-    visit new_contact_path
+    visit new_users_contact_path
   end
 
   scenario "A user can upload a new contact" do
@@ -32,11 +32,18 @@ feature 'Upload Contacts', %q{
     expect(page).to have_content("test@stuff.com added")
   end
 
+  scenario "A user is prompted for correct email when fails" do
+    fill_in "Email", with: "test@stu"
+    click_on "Add new contact"
+
+    expect(page).to have_content("Please eneter a valid email")
+  end
+
   scenario "Contact uploaded and a user can see their contacts" do
     fill_in "Email", with: "test@stuff.com"
     click_on "Add new contact"
 
-    visit contacts_path
+    visit users_contacts_path
 
     expect(page).to have_content("test@stuff.com")
 

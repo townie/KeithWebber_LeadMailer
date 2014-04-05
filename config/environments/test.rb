@@ -15,6 +15,9 @@ LeadMailer::Application.configure do
 
   OmniAuth.config.test_mode = true
 
+
+
+
    OmniAuth.config.mock_auth[:linkedin] = OmniAuth::AuthHash.new(
       {"provider"=>"linkedin",
       "uid"=>"BuXMvzpm3r",

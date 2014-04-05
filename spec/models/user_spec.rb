@@ -61,4 +61,9 @@ describe User do
 
     it {should have_many(:identities)}
   end
+
+  context 'Assocations with contacts' do
+
+    it {should have_many(:contacts)}
+  end
 end

@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
   has_many :identities,
            dependent: :destroy
 
+  has_many :contacts,
+            dependent: :destroy
+
+
   TEMP_EMAIL = 'change@me.com'
   TEMP_EMAIL_REGEX = /change@me.com/
 
@@ -46,7 +50,6 @@ class User < ActiveRecord::Base
         user.save!
       end
 
-      # Associate the identity with the user if not already
       if identity.user != user
         identity.user = user
         identity.save!
@@ -54,6 +57,5 @@ class User < ActiveRecord::Base
     end
     user
   end
-
 
 end
