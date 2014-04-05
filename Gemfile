@@ -9,7 +9,7 @@ source 'https://rubygems.org'
   gem 'jquery-rails'
   gem 'turbolinks'
   gem 'jbuilder', '~> 1.2'
-
+  gem 'rails_12factor'
 
   # Authentication
   gem 'devise'
