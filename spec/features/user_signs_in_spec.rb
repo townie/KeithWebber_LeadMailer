@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 feature 'User Signs In', %q{
-As a professional user,
-I want to be able to sign in and sign up with my LinkedIn account or regularly
-So that I can have access to all the ease of using my linkedIn account.
+  As a professional user,
+  I want to be able to sign in and sign up with my LinkedIn account or regularly
+  So that I can have access to all the ease of using my linkedIn account.
 
-Acceptance Criteria
+  Acceptance Criteria
 
 } do
 

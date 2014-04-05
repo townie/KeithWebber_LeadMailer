@@ -9,6 +9,8 @@ LeadMailer::Application.routes.draw do
     get 'users/auth/failure' => 'users/omniauth_callbacks#failed'
   end
 
+  resources :contacts
+
  # get "/users/auth/linkedin/callback", to: "users/omniauth_callbacks"
 
 
