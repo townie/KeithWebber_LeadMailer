@@ -20,7 +20,7 @@
       @contacts = Contact.all
     end
 
-    def callbacks
+    def callback
       binding.pry
     end
 
