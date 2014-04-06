@@ -10,6 +10,9 @@ source 'https://rubygems.org'
   gem 'turbolinks'
   gem 'jbuilder', '~> 1.2'
 
+  # Front end UI gems
+  gem 'simple_form'
+  gem 'foundation-rails'
 
   # Authentication
   gem 'devise'
@@ -17,9 +20,8 @@ source 'https://rubygems.org'
   gem 'omniauth'
   gem 'omniauth-linkedin'
 
-  # Front end UI gems
-  gem 'simple_form'
-  gem 'foundation-rails'
+  # Getting Contacts from 3rd party services
+  gem "omnicontacts"
 
   # User input validation gems for phone and email
   gem 'email_validator'
@@ -27,6 +29,7 @@ source 'https://rubygems.org'
 
   # Email related gems
   gem 'mail'
+
 
   group :doc do
     gem 'sdoc', require: false

@@ -49,6 +49,12 @@ feature 'Upload Contacts', %q{
 
   end
 
+  scenario "A user can access their 3rd party email services to get their contacts" do
+    click_on "Import contacts from Gmail"
+
+
+  end
+
 
 end
 
