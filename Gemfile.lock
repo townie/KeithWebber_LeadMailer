@@ -98,6 +98,9 @@ GEM
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
+    omnicontacts (0.3.4)
+      json
+      rack
     orm_adapter (0.5.0)
     pg (0.17.1)
     phonelib (0.3.0)
@@ -210,6 +213,7 @@ DEPENDENCIES
   mail
   omniauth
   omniauth-linkedin
+  omnicontacts
   pg
   phonelib
   pry
