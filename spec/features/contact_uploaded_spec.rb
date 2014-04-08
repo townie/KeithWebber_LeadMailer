@@ -46,12 +46,17 @@ feature 'Upload Contacts', %q{
     visit users_contacts_path
 
     expect(page).to have_content("test@stuff.com")
-
   end
 
   scenario "A user can access their 3rd party email services to get their contacts" do
+    OmniContacts.integration_test.enabled = true
+    OmniContacts.integration_test.mock(:gmail, :email => "user@example.com")
+
+    visit new_users_contact_path
+
     click_on "Import contacts from Gmail"
 
+    page.should have_content("user@example.com")
 
   end
 

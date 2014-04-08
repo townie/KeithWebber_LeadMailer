@@ -1,9 +1,5 @@
-
- <%= link_to "Create new contact", new_users_contact_path %><br />
-<%= link_to "Import contacts from Hotmail", '/contacts/hotmail' %> <br />
-<%= link_to "Import contacts from Gmail", '/contacts/gmail' %>
-
-<% if @contacts.count > 0 %>
+<h1>Newly Importanted Contacts </h1>
+<% if @new_contacts.count > 0 %>
   <table>
   <tr>
     <td></td>
@@ -11,7 +7,7 @@
     <td></td>
     <td></td>
   </tr>
-  <% @contacts.each do |contact| %>
+  <% @new_contacts.each do |contact| %>
   <tr>
     <td><%= contact.email %></td>
     <td><%= contact.first_name %></td>
