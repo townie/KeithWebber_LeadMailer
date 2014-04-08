@@ -17,11 +17,14 @@
     end
 
     def index
-      @contacts = Contact.all
+      @contacts = Contact.where("user_id = ?", current_user.id)
     end
 
     def callback
-      binding.pry
+
+      @new_contacts =  Contact.gmail_email_catcher(request.env['omnicontacts.contacts'], current_user)
+
+
     end
 
     protected
