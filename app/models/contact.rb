@@ -6,10 +6,7 @@ class Contact < ActiveRecord::Base
                                 message: "That email already exists" },
                       :email => {  message: "Please eneter a valid email" }
 
-
   def self.gmail_email_catcher(response, current_user)
-
-
     new_contact = []
     info_required_contact = []
     response.each do |lead|
