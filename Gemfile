@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
   # Standard Library Gems
-  gem 'rails', '4.0.4'
+  gem 'rails', '4.1.0'
   gem 'pg'
   gem 'sass-rails', '~> 4.0.2'
   gem 'uglifier', '>= 1.3.0'
@@ -10,8 +10,10 @@ source 'https://rubygems.org'
   gem 'turbolinks'
   gem 'jbuilder', '~> 1.2'
 
-  gem 'rails_12factor'
+  group :production do
 
+    gem 'rails_12factor'
+  end
 
   # Front end UI gems
   gem 'simple_form'
@@ -47,13 +49,16 @@ source 'https://rubygems.org'
     gem 'rspec-rails'
     gem 'pry'
     gem 'factory_girl_rails'
-    gem 'shoulda'
+
     gem 'railroady'
     gem 'dotenv-rails'
+    gem 'spring'
   end
 
   group :test do
     gem 'launchy'
     gem 'capybara'
+    gem 'minitest'
+    gem 'shoulda-matchers'
     gem 'valid_attribute'
   end
