@@ -42,4 +42,22 @@ feature 'User profile', %q{
     expect(User.first.company).to have_content("WebCo")
     expect(User.first.phone_number_primary).to have_content("6175553222")
   end
+
+  scenario "User delete's their profile" do
+    user_count = User.count
+    click_on @user.first_name
+
+    click_on "Cancel my account"
+
+    expect(User.first).to be_nil
+    expect(User.count).to eq(user_count - 1)
+
+    #just to double check that the user was deleted
+    visit new_user_session_path
+    fill_in "Email",        with: @user.email
+    fill_in "Password",     with: @user.password
+    click_on "Sign in"
+
+    expect(page).to have_content("Invalid email or password.")
+  end
 end
