@@ -21,10 +21,35 @@
     end
 
     def callback
-
       @new_contacts =  Contact.gmail_email_catcher(request.env['omnicontacts.contacts'], current_user)
+    end
 
+    def edit
+      @users = current_user
+       @contact = Contact.find(params[:id])
+    end
 
+    def show
+      @contact = Contacts.find(params[:id])
+    end
+
+    def update
+      @contact = Contact.find(params[:id])
+    end
+
+    def update
+      @contact = Contact.find(params[:id])
+        if @contact.update(contact_params)
+          redirect_to users_contacts_path, notice: "#{@contact.email} was successfully updated."
+       else
+          render action: 'edit'
+        end
+    end
+
+    def destroy
+      @contact = Contact.find(params[:id])
+      @contact.destroy
+      redirect_to users_contacts_url, notice: "Contact deleted"
     end
 
     protected

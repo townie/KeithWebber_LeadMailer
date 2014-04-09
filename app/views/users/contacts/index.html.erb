@@ -13,7 +13,7 @@
   </tr>
   <% @contacts.each do |contact| %>
   <tr>
-    <td><%= contact.email %></td>
+    <td><%= link_to contact.email, edit_users_contact_path(contact) %></td>
     <td><%= contact.first_name %></td>
     <td><%= contact.last_name %></td>
     <td><%= contact.phone_number %></td>

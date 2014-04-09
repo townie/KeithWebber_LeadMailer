@@ -9,9 +9,8 @@ feature 'Upload Contacts', %q{
   #---- Acceptance Criteria -------
 
   # *Upload email by entering email with other fields optional into a field
-  # *Upload excel spreadsheet
   # *from email, linkedin, facebook'
-  # *Upload a CSV
+
 
 
   before(:each) do
