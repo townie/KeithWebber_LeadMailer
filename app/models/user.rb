@@ -1,10 +1,12 @@
 class User < ActiveRecord::Base
   has_many :identities,
-           dependent: :destroy
+            dependent: :destroy
 
   has_many :contacts,
             dependent: :destroy
 
+  has_many :campaigns,
+            dependent: :destroy
 
   TEMP_EMAIL = 'change@me.com'
   TEMP_EMAIL_REGEX = /change@me.com/
