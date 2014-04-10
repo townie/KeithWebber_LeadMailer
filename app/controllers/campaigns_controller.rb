@@ -3,6 +3,11 @@ class CampaignsController < ApplicationController
     @campaigns = current_user.campaigns
   end
 
+  def show
+    @campaign = Campaign.find(params[:id])
+    # @contacts = @campaign.contacts
+  end
+
   def new
     @campaign = Campaign.new
   end
