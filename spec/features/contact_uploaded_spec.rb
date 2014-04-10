@@ -5,13 +5,10 @@ feature 'Upload Contacts', %q{
   I want to be able to upload the contacts to database,
   so that I may view all of the contacts
 } do
-
   #---- Acceptance Criteria -------
 
   # *Upload email by entering email with other fields optional into a field
   # *from email, linkedin, facebook'
-
-
 
   before(:each) do
     user      = FactoryGirl.create(:user)
@@ -52,14 +49,10 @@ feature 'Upload Contacts', %q{
     OmniContacts.integration_test.mock(:gmail, :email => "user@example.com")
 
     visit new_users_contact_path
-
     click_on "Import contacts from Gmail"
 
     page.should have_content("user@example.com")
-
   end
-
-
 end
 
 
