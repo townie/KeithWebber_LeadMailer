@@ -4,7 +4,8 @@ LeadMailer::Application.routes.draw do
 
   root to: "pages#index"
 
-  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' }
+  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks',:registrations => "registrations" }
+  # devise_for :users, :controllers => {  }
 
   devise_scope :users do
     get 'users/auth/failure' => 'users/omniauth_callbacks#failed'
