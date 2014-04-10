@@ -1,6 +1,15 @@
 require 'spec_helper'
 
 describe User do
+
+  context 'Assocations' do
+
+    it { should have_many(:identities) }
+    it { should have_many(:campaigns) }
+    it { should have_many(:contacts) }
+
+  end
+
   context '-validating correct user input-' do
 
     it {should validate_presence_of(:first_name)}
@@ -51,19 +60,13 @@ describe User do
   end
 
   context "Using LinkedIn omniAuth" do
-
     before do
       OmniAuth.config.test_mode = true
       OmniAuth.config.on_failure = Proc.new { |env|
         OmniAuth::FailureEndpoint.new(env).redirect_to_failure
       }
     end
-
-    it {should have_many(:identities)}
   end
 
-  context 'Assocations with contacts' do
 
-    it {should have_many(:contacts)}
-  end
 end

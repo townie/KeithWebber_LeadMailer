@@ -5,7 +5,6 @@ feature 'Manage Contacts', %q{
   I want to be able to see these contacts and edit them,
   So that I can fix any issues with contacts
 } do
-
   #---- Acceptance Criteria -------
 
   # Show all contacts

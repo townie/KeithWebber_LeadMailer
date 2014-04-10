@@ -1,5 +1,6 @@
 class Contact < ActiveRecord::Base
   belongs_to :user
+
   validates  :email,  presence: true,
                       uniqueness: { case_sensitive: false,
                                 scope: :user_id,

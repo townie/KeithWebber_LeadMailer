@@ -17,6 +17,9 @@ LeadMailer::Application.routes.draw do
 
   match "/contacts/:importer/callback" => "users/contacts#callback",  via: [:get, :post]
 
+  resources :campaigns
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
