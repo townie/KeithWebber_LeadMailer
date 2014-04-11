@@ -5,7 +5,7 @@ class CampaignsController < ApplicationController
 
   def show
     @campaign = Campaign.find(params[:id])
-    # @contacts = @campaign.contacts
+     @contacts = @campaign.contacts
   end
 
   def new
@@ -15,15 +15,32 @@ class CampaignsController < ApplicationController
   def create
     @campaign = current_user.campaigns.build(campaign_params)
     if @campaign.save
-      redirect_to campaigns_path, notice: "New Campaign Created"
+      redirect_to edit_campaign_path(@campaign), notice: "New Campaign Created"
     else
       render 'new'
     end
   end
 
+  def edit
+    @campaign = Campaign.find(params[:id])
+    @contacts = current_user.contacts
+
+  end
+
+  def update
+    @campaign =                   current_user.campaigns.find(params[:id])
+    @campaign.update(campaign_contacts_params)
+
+    redirect_to @campaign
+  end
+
   protected
 
+  def campaign_contacts_params
+    params.require(:campaign).permit(:contact_ids => [])
+  end
+
   def campaign_params
-    params.require(:campaign).permit(:title, :purpose)
+    params.require(:campaign).permit(:title, :purpose, :contact_ids)
   end
 end

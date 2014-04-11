@@ -1,0 +1,6 @@
+<p>Select contacts to add to this campaign</p>
+
+<%= simple_form_for @campaign do |f| %>
+  <%= f.association :contacts, label_method: :email, value_method: :id, as: :check_boxes %>
+  <%= f.submit "Add contact" %>
+<% end %>

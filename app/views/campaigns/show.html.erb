@@ -1,18 +1,16 @@
-
-
-
 <h1>Title: <%= @campaign.title %> </h1>
 <h2>Purpose: <%= @campaign.purpose %></td>
+
 <p></p>
 <p>RESULTS STUFF</p>
 <p>HOLDER STUFF</p>
 <p>ANALYTIC STUFF</p>
-<% if false %>
+
 <% @contacts.each do |contact| %>
   <%= contact.email %>
   <%= contact.first_name %>
   <%= contact.last_name %>
-
+  </br>
 <%  end %>
 
-<% end %>
+

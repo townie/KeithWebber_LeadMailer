@@ -19,6 +19,7 @@ LeadMailer::Application.routes.draw do
 
   resources :campaigns
 
+  #get '/contacts_to_campaign/:id' => "campaigns#contacts_to_campaign", as: "add_contacts_to_campaign"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

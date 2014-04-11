@@ -1,5 +1,7 @@
 class Contact < ActiveRecord::Base
   belongs_to :user
+  has_many :contact_campaigns
+  has_many :campaigns, through: :contact_campaigns
 
   validates  :email,  presence: true,
                       uniqueness: { case_sensitive: false,

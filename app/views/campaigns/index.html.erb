@@ -5,6 +5,7 @@
     <td>Title</td>
     <td>Purpose</td>
     <td>History</td>
+    <td>Contacts</td>
   </tr>
   <% @campaigns.each do |campaign| %>
     <tr>
@@ -16,6 +17,9 @@
       </td>
       <td>
         <%= link_to "See results", campaign_path(campaign) %>
+      </td>
+      <td>
+        <%= link_to "Add contacts", edit_campaign_path(campaign) %>
       </td>
     </tr>
   <% end %>
