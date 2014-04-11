@@ -4,6 +4,6 @@ FactoryGirl.define do
     first_name           "John"
     last_name            "Doe"
     phone_number         "7812723400"
-    user_id              1
+    user
   end
 end
