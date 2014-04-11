@@ -23,28 +23,21 @@ class CampaignsController < ApplicationController
 
   def edit
     @campaign = Campaign.find(params[:id])
-    @contact_campaign = ContactCampaign.new
     @contacts = current_user.contacts
+
   end
 
   def update
-    @campaign = current_user.campaigns.find(params[:id])
-    @contact_campaign = campaign_contacts_params
-
-    @contact_campaign.each do |contact_tagged_for_email|
-      if contact_tagged_for_email != 0
-        ContactCampaign.create(contact_id: contact_tagged_for_email.to_i, campaign: @campaign)
-      end
-    end
+    @campaign =                   current_user.campaigns.find(params[:id])
+    @campaign.update(campaign_contacts_params)
 
     redirect_to @campaign
-
   end
 
   protected
-  def campaign_contacts_params
-    params.require(:campaign).require(:contact_ids)
 
+  def campaign_contacts_params
+    params.require(:campaign).permit(:contact_ids => [])
   end
 
   def campaign_params

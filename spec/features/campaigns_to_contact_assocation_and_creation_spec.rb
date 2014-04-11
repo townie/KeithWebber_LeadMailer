@@ -51,9 +51,11 @@ feature 'Contacts get assigned to an email campaigns', %q{
   scenario "User can not keep adding the same email to the email blast" do
     visit edit_campaign_path(@campaign1)
     check(@contact1.email)
+    check(@contact2.email)
     click_on "Add contact"
     visit edit_campaign_path(@campaign1)
-
+    uncheck(@contact1.email)
+    click_on "Add contact"
     expect(page).to_not have_content(@contact1.email)
   end
 end
