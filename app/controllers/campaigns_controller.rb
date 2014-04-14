@@ -31,7 +31,7 @@ class CampaignsController < ApplicationController
     @campaign =                   current_user.campaigns.find(params[:id])
     @campaign.update(campaign_contacts_params)
 
-    redirect_to @campaign
+    redirect_to emailtemplates_path
   end
 
   protected
