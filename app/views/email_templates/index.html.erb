@@ -1,0 +1,8 @@
+
+<h1>Select Email template </h1>
+<% if !@emailtemplates.nil? %>
+  <% @emailtemplates.each do |etemps| %>
+    <%= etemps.title %>
+    <%= link_to 'Select Email template', emailtemplate_path(etemps) %>
+  <% end %>
+<% end %>

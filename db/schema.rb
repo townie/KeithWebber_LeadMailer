@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20140411194532) do
   add_index "contacts", ["email"], name: "index_contacts_on_email", using: :btree
   add_index "contacts", ["user_id"], name: "index_contacts_on_user_id", using: :btree
 
-  create_table "emailtemplates", force: true do |t|
+  create_table "email_templates", force: true do |t|
     t.string "title",    null: false
     t.string "filename", null: false
   end

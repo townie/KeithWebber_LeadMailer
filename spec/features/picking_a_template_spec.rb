@@ -12,7 +12,7 @@ feature "User selects an email template", %q{
 # can see all the templates and select one to create a campaign around
 
   before(:each) do
-    @user       = FactoryGirl.create(:user)
+    @user        = FactoryGirl.create(:user)
     @campaign1   = FactoryGirl.create(:campaign, user: @user)
     @contact1    = FactoryGirl.create(:contact, user: @user)
     sign_in_as(@user)
@@ -34,14 +34,14 @@ feature "User selects an email template", %q{
 
     click_on "Select Email template"
 
-    click_on template1.title
+    click_on "Select Email template"
 
    expect(page).to have_content("Customize")
   end
 
   scenario "See all templates" do
     template1 = FactoryGirl.create(:EmailTemplate)
-    visit templates_path
+    visit emailtemplates_path
 
     expect(page).to have_content(template1.title)
 

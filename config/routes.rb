@@ -19,7 +19,7 @@ LeadMailer::Application.routes.draw do
 
   resources :campaigns
 
-  resources :emailtemplates, controller: "emailtemplates"
+  resources :emailtemplates, controller: "email_templates"
 
   #get '/contacts_to_campaign/:id' => "campaigns#contacts_to_campaign", as: "add_contacts_to_campaign"
 

@@ -1,22 +1,2 @@
-<%= simple_form_for @contact, url: users_contact_path, method: :put do |f| %>
-  <div class="row">
-    <div class="small-12 medium-6 columns">
-      <%= f.input :first_name,      required: true, placeholder: "John",  autofocus: true %>
-    </div>
-    <div class="small-12 medium-6 columns">
-      <%= f.input :last_name,      required: true, placeholder: "Smith"%>
-    </div>
-    <div class="small-12 medium-12 columns">
-      <%= f.input :email,         required: true, placeholder: "jsmith@example.com"%>
-    </div>
-    <div class="small-12 medium-12 columns">
-      <%= f.input :phone_number,       placeholder: "Example Co" %>
-    </div>
-    <div class="small-12 medium-12 columns">
-      <%= f.submit "Edit contact" %>
-    </div>
-  </div>
-
-<% end %>
-
+<%= render 'form' %>
 <%= link_to 'Delete', users_contact_path, method: :delete, data: { confirm: 'Are you sure?' } %>
