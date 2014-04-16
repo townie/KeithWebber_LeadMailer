@@ -3,6 +3,7 @@ class EmailTemplatesController < ApplicationController
     @emailtemplates  = EmailTemplate.all
   end
 
+  # admin stuff
   def new
     @emailtemplate = EmailTemplate.new
   end
@@ -15,6 +16,7 @@ class EmailTemplatesController < ApplicationController
       render 'new'
     end
   end
+  # ^^^ admin
 
   def show
     @emailtemplates= [EmailTemplate.find(params[:id])]

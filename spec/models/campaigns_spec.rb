@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Campaign do
 
+  it { should belong_to(:email_template)}
   it { should belong_to(:user) }
   it { should have_many(:contact_campaigns) }
 

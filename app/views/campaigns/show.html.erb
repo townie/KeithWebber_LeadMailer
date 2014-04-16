@@ -1,16 +1,48 @@
-<h1>Title: <%= @campaign.title %> </h1>
-<h2>Purpose: <%= @campaign.purpose %></td>
+<h1> </h1>
+<h2></h2>
 
 <p></p>
-<%= link_to "Select Email template", emailtemplates_path %>
-<p>HOLDER STUFF</p>
-<p>ANALYTIC STUFF</p>
 
-<% @contacts.each do |contact| %>
-  <%= contact.email %>
-  <%= contact.first_name %>
-  <%= contact.last_name %>
-  </br>
-<%  end %>
+<div id='email-preview'>
+  <%= render @email_template, locals: {user: @campaign.contacts.first, url: 'bob'} %>
+</div>
+
+
+
+<%= link_to "Select Email template", emailtemplates_path %>
+
+<ul class="pricing-table">
+  <li class="title">Title: <%= @campaign.title %></li>
+  <li class="price">Purpose: <%= @campaign.purpose %></li>
+  <% if !@campaign.email_template.nil? %>
+  <li class="description">Template: <%= @campaign.email_template.title %></li>
+  <% end %>
+</ul>
+
+<%= simple_form_for @campaign, url: campaign_path, method: :put do |f| %>
+  <%= f.association :email_template, label_method: :title, value_method: :id %>
+  <%= f.submit %>
+<% end %>
+
+<table>
+  <tr>
+    <td>Email</td>
+    <td>First name</td>
+    <td>Last name</td>
+  </tr>
+  <% @contacts.each do |contact| %>
+    <tr>
+      <td>
+        <%= contact.email %>
+      </td>
+      <td>
+        <%= contact.first_name %>
+      </td>
+      <td>
+       <%= contact.last_name %>
+      </td>
+    </tr>
+  <%  end %>
+</table>
 
 
