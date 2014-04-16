@@ -1,0 +1,15 @@
+<%= simple_form_for @emailtemplate, url: emailtemplates_path, method: :post  do |f| %>
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <%= f.input :title,      required: true, placeholder: "John",  autofocus: true %>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <%= f.input :filename,      required: true, placeholder: "Smith"%>
+    </div>
+
+    <div class="small-12 medium-12 columns">
+      <%= f.submit  %>
+    </div>
+  </div>
+
+<% end %>

@@ -11,7 +11,6 @@ source 'https://rubygems.org'
   gem 'jbuilder', '~> 1.2'
 
   group :production do
-
     gem 'rails_12factor'
   end
 
@@ -35,7 +34,12 @@ source 'https://rubygems.org'
 
   # Email related gems
   gem 'mail'
+  # need to add?!??!
+  #gem 'sidekiq_mailer'
 
+  #gem 'mailcatcher' ---< DONT ADD
+  #gem 'email_spec' <<<< test?S?S
+  # gem "mailman" --< incoming mail
 
   group :doc do
     gem 'sdoc', require: false
