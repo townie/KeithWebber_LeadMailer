@@ -3,13 +3,13 @@
 
 <p></p>
 
-<div id='email-preview'>
+<div id='email-preview small-12 medium-6 columns'>
   <%= render @email_template, locals: {user: @campaign.contacts.first, url: 'bob'} %>
 </div>
 
 
 
-<%= link_to "Customize", material_path %>
+<%= link_to "Customize", new_material_path %>
 
 <ul class="pricing-table">
   <li class="title">Title: <%= @campaign.title %></li>

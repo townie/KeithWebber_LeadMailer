@@ -1,0 +1,17 @@
+<%= @campaign.title %>
+
+<%= simple_form_for  @material do |f| %>
+  <%=  @campaign.title %>
+  <%= f.input :title, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field1, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field2, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field3, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field4, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field5, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field6, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field7, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field8, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field9, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.input :field10, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  <%= f.submit %>
+<% end %>

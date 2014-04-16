@@ -1,6 +1,6 @@
 <% @emailtemplates.each do |etemps| %>
-  <%= etemps.filename %>
-  <%= link_to etemps.title, emailtemplate_path(etemps) %>
-  <%= link_to "Customize", content_path(etemps) %>
+  <%= etemps.filename %> -
+  <%=  etemps.title %> -
+  <%= link_to "Customize", material_path(etemps) %>
 <% end %>
 

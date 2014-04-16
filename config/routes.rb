@@ -19,7 +19,7 @@ LeadMailer::Application.routes.draw do
 
   resources :campaigns
 
-  resources :material
+  resources :materials
 
   resources :emailtemplates, controller: "email_templates"
 

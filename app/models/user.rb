@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   has_many :campaigns,
             dependent: :destroy
 
+  has_many :materials,
+            through: :campaigns
+
   TEMP_EMAIL = 'change@me.com'
   TEMP_EMAIL_REGEX = /change@me.com/
 

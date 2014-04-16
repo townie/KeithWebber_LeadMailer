@@ -7,6 +7,7 @@ describe User do
     it { should have_many(:identities) }
     it { should have_many(:campaigns) }
     it { should have_many(:contacts) }
+    it { should have_many(:materials).through(:campaigns)}
 
   end
 

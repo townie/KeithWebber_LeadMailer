@@ -24,11 +24,26 @@ feature 'User Customizes Email', %q{
 
   end
 
+  scenario
 
   scenario 'Edit fields that correspond to the text fields in the emails' do
     visit campaign_path(@campaign1)
 
     click_on "Customize"
 
+    fill_in "Title", with: "its a create day"
+    fill_in "Field1", with: "Hello World"
+
+    click_on "Create Material"
+
+    expect(page).to have_content("Successfully created")
   end
+
+  scenario 'Create a new email content section' do
+
+
+  end
+
+
+
 end

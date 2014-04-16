@@ -6,7 +6,9 @@ class CampaignsController < ApplicationController
   def show
     @campaign = Campaign.find(params[:id])
     @contacts = @campaign.contacts
-    @email_template = 'emailblast/email1'
+    filename= @campaign.email_template.filename
+    @email_template = "emailblast/#{filename}"
+    session[:current_campaign] = @campaign.id
   end
 
   def new
