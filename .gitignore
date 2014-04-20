@@ -19,3 +19,6 @@
 
 .env
 .notes
+
+app/controllers/user/contacts_controller.rb
+app/controllers/user/omniauth_callbacks_controller.rb
