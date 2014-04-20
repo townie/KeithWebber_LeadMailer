@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/townie/KeithWebber_LeadMailer.png)](https://codeclimate.com/github/townie/KeithWebber_LeadMailer)
+
 == Lead Mailer
 
 Things we need to update in dev mode are

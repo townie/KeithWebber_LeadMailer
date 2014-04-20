@@ -24,8 +24,6 @@ feature 'User Customizes Email', %q{
 
   end
 
-  scenario
-
   scenario 'Edit fields that correspond to the text fields in the emails' do
     visit campaign_path(@campaign1)
 
@@ -40,11 +38,16 @@ feature 'User Customizes Email', %q{
 
   end
 
-  scenario 'Create a new email content section' do
+  scenario "Display's multiple thumbnails of email templates" do
+    template1 = FactoryGirl.create(:EmailTemplate)
+    visit campaign_path(@campaign1)
+    visit emailtemplates_path
 
+    click_on 'Select Email template'
+    click_on "Customize"
 
+    expect(page).to have_content('Title')
+    expect(page).to have_content('Field1')
   end
-
-
 
 end
