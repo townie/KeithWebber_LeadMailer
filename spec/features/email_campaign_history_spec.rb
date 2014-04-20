@@ -23,6 +23,7 @@ feature 'User creates an email campaign', %q{
     user2      = FactoryGirl.create(:user)
     sign_in_as(user2)
     campaign3 = FactoryGirl.create(:campaign, title: "FAKE USER", purpose: "BAD", user: user2)
+
     click_on "Log Out"
 
     sign_in_as(@user)
@@ -38,6 +39,7 @@ feature 'User creates an email campaign', %q{
 
   scenario "I want to see who the email was sent to." do
     campaign1 = FactoryGirl.create(:campaign, user: @user)
+
     visit campaigns_path
 
     click_on "See results"

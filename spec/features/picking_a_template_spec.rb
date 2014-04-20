@@ -18,25 +18,14 @@ feature "User selects an email template", %q{
     sign_in_as(@user)
   end
 
-  scenario "Display's multiple thumbnails of email templates" do
-    template1 = FactoryGirl.create(:EmailTemplate)
 
-    visit campaign_path(@campaign1)
-
-    click_on "Select Email template"
-
-    expect(page).to have_content(template1.title)
-  end
 
   scenario "Selected template and start editing it" do
     template1 = FactoryGirl.create(:EmailTemplate)
+
     visit campaign_path(@campaign1)
 
-    click_on "Select Email template"
-
-    click_on "Select Email template"
-
-  # expect(page).to have_content("Customize")
+    expect(page).to have_content("Customize")
   end
 
   scenario "See all templates" do
@@ -44,16 +33,16 @@ feature "User selects an email template", %q{
     visit emailtemplates_path
 
     expect(page).to have_content(template1.title)
-
   end
 
-  scenario "An email is assocated with a campaign" do
-    template1 = FactoryGirl.create(:EmailTemplate)
-    visit campaign_path(@campaign1)
+  # scenario "An email is assocated with a campaign" do
+  #   template1 = FactoryGirl.create(:EmailTemplate)
 
-    select(template1.title, from: "Email template")
-    click_on "Update Campaign"
+  #   visit campaign_path(@campaign1)
 
-    expect(Campaign.last.email_template).to eq(template1)
-  end
+  #   select(template1.title, from: "Email template")
+  #   click_on "Update Campaign"
+
+  #   expect(Campaign.last.email_template).to eq(template1)
+  # end
 end

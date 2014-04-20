@@ -21,6 +21,15 @@ feature 'Upload Contacts', %q{
     visit new_users_contact_path
   end
 
+  scenario "A user can fill out first name last name and phone number if know" do
+    fill_in "First name", with: "test"
+    fill_in "Last name", with: "stuff"
+    fill_in "Email", with: "test@stuff.com"
+    click_on "Add new contact"
+
+    expect(page).to have_content("test@stuff.com added")
+  end
+
   scenario "A user can upload a new contact" do
     fill_in "Email", with: "test@stuff.com"
     click_on "Add new contact"

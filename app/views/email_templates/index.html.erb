@@ -1,8 +1,26 @@
 
 <h1>Select Email template </h1>
+<table>
+<tr>
+  <td>
+    Filename
+  </td>
+  <td>
+    name
+  </td>
+</tr>
 <% if !@emailtemplates.nil? %>
   <% @emailtemplates.each do |etemps| %>
-    <%= etemps.title %>
+  <tr>
+  <td>
+      <%= etemps.title %>
+  </td>
+
+    <td>
     <%= link_to 'Select Email template', emailtemplate_path(etemps) %>
+  </td>
+
+  </tr>
   <% end %>
 <% end %>
+</table>

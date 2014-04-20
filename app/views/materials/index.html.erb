@@ -1,0 +1,56 @@
+<table>
+  <tr>
+
+    <td>Title</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+  </tr>
+  <% @materials.each do |mat| %>
+    <tr>
+
+      <td>
+        <%= mat.title %>
+      </td>
+      <td>
+        <%= mat.field1 %>
+      </td>
+         <td>
+        <%= mat.field2 %>
+      </td>
+         <td>
+        <%= mat.field3 %>
+      </td>
+         <td>
+        <%= mat.field4 %>
+      </td>
+         <td>
+        <%= mat.field5 %>
+      </td>
+         <td>
+        <%= mat.field6 %>
+      </td>
+         <td>
+        <%= mat.field7 %>
+      </td>
+         <td>
+        <%= mat.field8 %>
+      </td>
+         <td>
+        <%= mat.field9 %>
+      </td>
+         <td>
+        <%= mat.field10 %>
+      </td>
+
+
+    </tr>
+  <% end %>
+<table>

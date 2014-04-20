@@ -1,26 +1,34 @@
-<%= link_to "Create New Campaign", new_campaign_path %>
+<div class="row">
+  <div class="small-12 medium-12   columns">
+    <%= link_to "Create New Campaign", new_campaign_path, class: "button [secondary success alert]" %>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <td>Title</td>
-    <td>Purpose</td>
-    <td>History</td>
-    <td>Contacts</td>
-  </tr>
-  <% @campaigns.each do |campaign| %>
-    <tr>
-      <td>
-        <%= campaign.title %>
-      </td>
-      <td>
-        <%= campaign.purpose %>
-      </td>
-      <td>
-        <%= link_to "See results", campaign_path(campaign) %>
-      </td>
-      <td>
-        <%= link_to "Add contacts", edit_campaign_path(campaign) %>
-      </td>
-    </tr>
-  <% end %>
-<table>
+<div class="row">
+  <div class="small-12 medium-12 columns">
+    <table>
+      <tr>
+        <td>Title</td>
+        <td>Purpose</td>
+        <td>History</td>
+        <td>Contacts</td>
+      </tr>
+      <% @campaigns.each do |campaign| %>
+        <tr>
+          <td>
+            <%= campaign.title %>
+          </td>
+          <td>
+            <%= campaign.purpose %>
+          </td>
+          <td>
+            <%= link_to "See results", campaign_path(campaign) %>
+          </td>
+          <td>
+            <%= link_to "Add contacts", edit_campaign_path(campaign) %>
+          </td>
+        </tr>
+      <% end %>
+    <table>
+  </div>
+</div>

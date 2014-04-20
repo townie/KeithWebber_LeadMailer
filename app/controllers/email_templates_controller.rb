@@ -20,6 +20,10 @@ class EmailTemplatesController < ApplicationController
 
   def show
     @emailtemplates= [EmailTemplate.find(params[:id])]
+    filename= @emailtemplates.first.filename
+    @email_template = "emailblast/#{filename}"
+
+    session[:template_customize] = @emailtemplates.first.id
   end
 
   protected

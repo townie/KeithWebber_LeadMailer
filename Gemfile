@@ -17,7 +17,7 @@ source 'https://rubygems.org'
   # Front end UI gems
   gem 'simple_form'
   gem 'foundation-rails'
-
+  gem 'formtastic'
 
   # Authentication
   gem 'devise'

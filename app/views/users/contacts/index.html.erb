@@ -1,23 +1,30 @@
+<div class="row">
+  <div class="small-12 medium-12 columns">
+    <%= link_to "Create new contact", new_users_contact_path, class: "button [radius round]" %>
+    <%= link_to "Import contacts from Hotmail", '/contacts/hotmail', class: "button [secondary success alert]" %>
+    <%= link_to "Import contacts from Gmail", '/contacts/gmail', class: "button  alert" %>
+  </div>
+</div>
 
- <%= link_to "Create new contact", new_users_contact_path %><br />
-<%= link_to "Import contacts from Hotmail", '/contacts/hotmail' %> <br />
-<%= link_to "Import contacts from Gmail", '/contacts/gmail' %>
-
-<% if @contacts.count > 0 %>
-  <table>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <% @contacts.each do |contact| %>
-  <tr>
-    <td><%= link_to contact.email, edit_users_contact_path(contact) %></td>
-    <td><%= contact.first_name %></td>
-    <td><%= contact.last_name %></td>
-    <td><%= contact.phone_number %></td>
-  </tr>
-  <% end %>
-  </table>
-<% end %>
+<div class="row">
+  <div class="small-12 medium-6 columns">
+    <% if @contacts.count > 0 %>
+      <table>
+      <tr>
+        <td>Email</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Phone Number</td>
+      </tr>
+      <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= link_to contact.email, edit_users_contact_path(contact) %></td>
+        <td><%= contact.first_name %></td>
+        <td><%= contact.last_name %></td>
+        <td><%= contact.phone_number %></td>
+      </tr>
+      <% end %>
+      </table>
+    <% end %>
+  </div>
+</div>
