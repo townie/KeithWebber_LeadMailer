@@ -1,4 +1,5 @@
-[![Code Climate](https://codeclimate.com/github/townie/KeithWebber_LeadMailer.png)](https://codeclimate.com/github/townie/KeithWebber_LeadMailer)
+{<img src="https://codeclimate.com/github/townie/KeithWebber_LeadMailer.png" />}[https://codeclimate.com/github/townie/KeithWebber_LeadMailer]
+{<img src="https://travis-ci.org/townie/KeithWebber_LeadMailer.svg?branch=materialbranch" alt="Build Status" />}[https://travis-ci.org/townie/KeithWebber_LeadMailer]
 
 == Lead Mailer
 
