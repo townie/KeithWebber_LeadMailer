@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.0.0
+  addons:
+  postgresql: "9.3"
 test:
   adapter: postgresql
   database: lead_mailer_test
