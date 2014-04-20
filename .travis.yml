@@ -1,7 +1,7 @@
 language: ruby
 rvm:
   - 2.0.0
-  addons:
+addons:
   postgresql: "9.3"
 test:
   adapter: postgresql
