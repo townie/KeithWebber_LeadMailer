@@ -1,3 +1,7 @@
 language: ruby
 rvm:
   - 2.0.0
+test:
+  adapter: sqlite3
+  database: ":memory:"
+  timeout: 500
