@@ -5,3 +5,6 @@ test:
   adapter: postgresql
   database: ":memory:"
   timeout: 500
+addons:
+  code_climate:
+    repo_token: c197ccf1c6f7397bf5fb89dea66b1f15faeae402cd9f3c6574a0270d4ed53f31
