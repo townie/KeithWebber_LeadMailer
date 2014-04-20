@@ -2,6 +2,6 @@ language: ruby
 rvm:
   - 2.0.0
 test:
-  adapter: sqlite3
+  adapter: postgresql
   database: ":memory:"
   timeout: 500
