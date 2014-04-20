@@ -1,6 +1,10 @@
+<div id='email-preview'>
+  <%= render @email_template, collection: @emailtemplates.first %>
+</div>
+
 <% @emailtemplates.each do |etemps| %>
   <%= etemps.filename %> -
   <%=  etemps.title %> -
-  <%= link_to "Customize", material_path(etemps) %>
+  <%= link_to "Customize", new_material_path(etemps) %>
 <% end %>
 

@@ -3,9 +3,7 @@
 
 <p></p>
 
-<div id='email-preview small-12 medium-6 columns'>
-  <%= render @email_template, locals: {user: @campaign.contacts.first, url: 'bob'} %>
-</div>
+
 
 
 
@@ -14,15 +12,9 @@
 <ul class="pricing-table">
   <li class="title">Title: <%= @campaign.title %></li>
   <li class="price">Purpose: <%= @campaign.purpose %></li>
-  <% if !@campaign.email_template.nil? %>
-  <li class="description">Template: <%= @campaign.email_template.title %></li>
-  <% end %>
+
 </ul>
 
-<%= simple_form_for @campaign, url: campaign_path, method: :put do |f| %>
-  <%= f.association :email_template, label_method: :title, value_method: :id %>
-  <%= f.submit %>
-<% end %>
 
 <table>
   <tr>

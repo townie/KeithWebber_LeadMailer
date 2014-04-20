@@ -6,8 +6,12 @@ class CampaignsController < ApplicationController
   def show
     @campaign = Campaign.find(params[:id])
     @contacts = @campaign.contacts
-    filename= @campaign.email_template.filename
-    @email_template = "emailblast/#{filename}"
+    # if @campaign.email_template.present?
+    #   filename= @campaign.email_template.filename
+    # else
+    #   filename = 'email1'
+    # end
+    # @email_template = "emailblast/#{filename}"
     session[:current_campaign] = @campaign.id
   end
 
@@ -17,6 +21,7 @@ class CampaignsController < ApplicationController
 
   def create
     @campaign = current_user.campaigns.build(campaign_params)
+
     if @campaign.save
       redirect_to edit_campaign_path(@campaign), notice: "New Campaign Created"
     else
@@ -27,7 +32,6 @@ class CampaignsController < ApplicationController
   def edit
     @campaign = Campaign.find(params[:id])
     @contacts = current_user.contacts
-    @email_template = EmailTemplate.all
   end
 
   def update
@@ -36,14 +40,10 @@ class CampaignsController < ApplicationController
     redirect_to campaign_path
   end
 
-  protected
-
-  # def email_template_params
-  #   params.require(:campaign).permit( :email_template)
-  # end
+protected
 
   def campaign_contacts_params
-    params.require(:campaign).permit(:email_template_id, :contact_ids => [])
+    params.require(:campaign).permit( :contact_ids => [])
   end
 
   def campaign_params

@@ -18,8 +18,8 @@ feature 'User Customizes Email', %q{
   before(:each) do
     @user       = FactoryGirl.create(:user)
     sign_in_as(@user)
-    @template    = FactoryGirl.create(:EmailTemplate)
-    @campaign1   = FactoryGirl.create(:campaign, user: @user, email_template: @template)
+
+    @campaign1   = FactoryGirl.create(:campaign, user: @user)
     @contact1    = FactoryGirl.create(:contact, user: @user)
 
   end
@@ -37,6 +37,7 @@ feature 'User Customizes Email', %q{
     click_on "Create Material"
 
     expect(page).to have_content("Successfully created")
+
   end
 
   scenario 'Create a new email content section' do

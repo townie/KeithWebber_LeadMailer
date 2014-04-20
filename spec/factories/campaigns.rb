@@ -3,6 +3,5 @@ FactoryGirl.define do
     title            "Marketing"
     purpose          "Sell more stuff"
     user_id           1
-    EmailTemplate
   end
 end

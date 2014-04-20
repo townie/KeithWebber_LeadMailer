@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(contact_params)
+    @contact = current_user.contact.build(contact_params)
     if @contact.save
       redirect_to new_contact_path, notice: "#{@contact.email} added"
     else
@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
   end
 
   def index
-    @contacts = Contact.all
+    @contacts = current_user.contact
   end
 
   protected

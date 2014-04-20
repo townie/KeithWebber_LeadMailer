@@ -65,6 +65,8 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
     foundation-rails (5.2.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -206,6 +208,7 @@ DEPENDENCIES
   dotenv-rails
   email_validator
   factory_girl_rails
+  formtastic
   foundation-rails
   jbuilder (~> 1.2)
   jquery-rails

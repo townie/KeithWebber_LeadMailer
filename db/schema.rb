@@ -11,16 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416150841) do
+ActiveRecord::Schema.define(version: 20140418235643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "campaigns", force: true do |t|
-    t.string  "title",             null: false
-    t.text    "purpose",           null: false
-    t.integer "user_id",           null: false
-    t.integer "email_template_id"
+    t.string  "title",   null: false
+    t.text    "purpose", null: false
+    t.integer "user_id", null: false
   end
 
   add_index "campaigns", ["user_id"], name: "index_campaigns_on_user_id", using: :btree
@@ -60,8 +59,8 @@ ActiveRecord::Schema.define(version: 20140416150841) do
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
 
   create_table "materials", force: true do |t|
-    t.integer  "campaign_id", null: false
-    t.string   "title",       null: false
+    t.integer  "campaign_id",       null: false
+    t.string   "title",             null: false
     t.string   "field1"
     t.string   "field2"
     t.string   "field3"
@@ -74,6 +73,7 @@ ActiveRecord::Schema.define(version: 20140416150841) do
     t.string   "field10"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "email_template_id"
   end
 
   create_table "users", force: true do |t|

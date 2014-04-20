@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe EmailTemplate do
 
-  it { should have_many(:campaigns)}
+  it { should have_many(:materials)}
 
   it { should have_valid(:title).when('MA email blast', "GREAT eamil") }
   it { should_not have_valid(:title).when('', nil) }

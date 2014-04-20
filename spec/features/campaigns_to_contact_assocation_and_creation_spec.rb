@@ -18,6 +18,7 @@ feature 'Contacts get assigned to an email campaigns', %q{
     @contact1    = FactoryGirl.create(:contact, user: @user)
     @contact2    = FactoryGirl.create(:contact, user: @user)
     @contact3    = FactoryGirl.create(:contact, user: @user)
+
   end
 
   scenario "After Creating a campaign I want to be able to add contacts to the campaign" do
