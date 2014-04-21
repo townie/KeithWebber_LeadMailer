@@ -3,7 +3,8 @@
 <div id='email-preview'>
   <%= render @emailtemplate , collection: @material %>
 </div>
-
+<h1> <%= link_to 'Send Email Now', sendemail_path(@material) %> </h1>
+<strong><%= link_to 'Edit this template', edit_material_path(@material), class: 'button alert' %></strong>
 <table>
   <tr>
     <td>Campaign</td>

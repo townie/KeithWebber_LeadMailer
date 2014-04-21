@@ -32,6 +32,15 @@ source 'https://rubygems.org'
   gem 'email_validator'
   gem 'phonelib'
 
+  #sidekiq setup for mailing
+  gem 'sidekiq'
+  gem 'foreman'
+  gem 'sinatra', require: false
+  gem 'slim'
+  gem 'sendgrid'
+
+
+
   # Email related gems
   gem 'mail'
   # need to add?!??!

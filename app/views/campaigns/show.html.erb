@@ -1,20 +1,26 @@
-<h1> </h1>
-<h2></h2>
-
-<p></p>
-
-
-
-
-
 <%= link_to "Customize", new_material_path %>
 
 <ul class="pricing-table">
   <li class="title">Title: <%= @campaign.title %></li>
   <li class="price">Purpose: <%= @campaign.purpose %></li>
-
 </ul>
 
+<h1>Material of campaign</h1>
+
+<table>
+  <tr>
+    <td>
+      Title
+    </td>
+  </tr>
+  <% @materials.each do |mat| %>
+  <tr>
+    <td>
+      <%= link_to mat.title, mat %>
+    </td>
+  </tr>
+  <% end %>
+</table>
 
 <table>
   <tr>
