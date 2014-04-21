@@ -51,6 +51,12 @@ class MaterialsController < ApplicationController
     redirect_to material_path(@material)
   end
 
+  def sendemail
+    @material = current_user.materials.find(params[:id])
+    EmailWorker.perform_async(@material.id)
+    redirect_to @material, notice: "Sending email"
+  end
+
   protected
 
   def material_params
