@@ -65,6 +65,7 @@ GEM
     email_validator (1.4.0)
       activemodel
     erubis (2.7.0)
+    excon (0.32.1)
     execjs (2.0.2)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -94,6 +95,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mandrill-api (1.0.51)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.5.3)
@@ -176,9 +180,6 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    sendgrid (1.2.0)
-      json
-      json
     shoulda-matchers (2.6.0)
       activesupport (>= 3.0.0)
     sidekiq (3.0.0)
@@ -253,6 +254,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mail
+  mandrill-api
   minitest
   omniauth
   omniauth-linkedin
@@ -267,7 +269,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.2)
   sdoc
-  sendgrid
   shoulda-matchers
   sidekiq
   simple_form

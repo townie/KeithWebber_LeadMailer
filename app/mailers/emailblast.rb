@@ -1,9 +1,8 @@
 class Emailblast < ActionMailer::Base
-  include SendGrid
-  sendgrid_category :use_subject_lines
-  sendgrid_enable   :ganalytics, :opentrack
+  # sendgrid_category :use_subject_lines
+  # sendgrid_enable   :ganalytics, :opentrack
 
-  default from: "from@example.com"
+  default from: "from@leadmailer.herokuapp.com"
 
   def email1(material, contact)
     @contact = contact
