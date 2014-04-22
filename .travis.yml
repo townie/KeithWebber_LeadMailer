@@ -6,4 +6,4 @@ before_script:
   # it will act like the regular `database.yml` when the tests are run.
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database lead_mailer_test;' -U postgres
-
+  - rake db:test:prepare
