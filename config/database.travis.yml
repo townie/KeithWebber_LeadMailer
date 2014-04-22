@@ -1,4 +1,4 @@
 test:
   adapter: postgresql
-  database: lead_mailers_test
+  database: lead_mailer_test
   username: postgres
