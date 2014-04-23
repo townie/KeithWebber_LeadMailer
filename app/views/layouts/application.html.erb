@@ -13,32 +13,37 @@
 
   <body>
 
-  <div class="contain-to-grid sticky" data-options="sticky_on: large">
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="/">LeadMailer</a></h1>
-        </li>
-         <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
 
+    <div id="DIV_1">
+      <a  id="H2_2" class="right-off-canvas-toggle" href="#" >Menu</a>
+      <ul id="UL_3">
+        <li id="LI_4">
+        </li>
+        <li id="LI_5">
+        </li>
+        <li id="LI_6">
+        </li>
       </ul>
 
-      <section class="top-bar-section">
-        <ul class="right">
-          <% if user_signed_in? %>
-            <li> <%= link_to "Templates", emailtemplates_path %></li>
-            <li> <%= link_to "Campaigns", campaigns_path %></li>
-            <li> <%= link_to "Contacts", users_contacts_path %></li>
-            <li class="active"> <%= link_to current_user.first_name, edit_user_registration_path %></li>
-            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li class="active"> <%= link_to "Register", new_user_registration_path %></li>
-            <li> <%= link_to "Log In", new_user_session_path %></li>
-          <% end %>
-        </ul>
-      </section>
-    </nav>
-  </div>
+    </div>
+
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <% if user_signed_in? %>
+          <li> <%= link_to "Templates", emailtemplates_path %></li>
+          <li> <%= link_to "Campaigns", campaigns_path %></li>
+          <li> <%= link_to "Contacts", users_contacts_path %></li>
+          <li class="active"> <%= link_to current_user.first_name, edit_user_registration_path %></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li class="active"> <%= link_to "Register", new_user_registration_path %></li>
+          <li> <%= link_to "Log In", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </aside>
+
 
     <% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
@@ -56,6 +61,9 @@
       </div>
     </div>
 
+
+    </div>
+</div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

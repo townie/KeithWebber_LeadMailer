@@ -1,0 +1,92 @@
+body {
+    background-image:url('chalkboard.jpg');
+    opacity:0.65;
+}
+
+
+#DIV_1 {
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    height: 30px;
+    position: fixed;
+    right: 40px;
+    text-decoration: none solid rgb(51, 51, 51);
+    top: 35px;
+    width: 92px;
+    z-index: 40;
+    border: 0px none rgb(51, 51, 51);
+    font: normal normal normal 18px/28.6875px Merriweather, sans-serif;
+    outline: rgb(51, 51, 51) none 0px;
+    transition: all 0.34s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+}/*#DIV_1*/
+
+#H2_2 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 57px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 900 20px/20px Karla, Arial, sans-serif;
+    margin: 0px 5px 0px 0px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#H2_2*/
+
+#UL_3 {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    text-decoration: none solid rgb(51, 51, 51);
+    vertical-align: top;
+    width: 25px;
+    border: 0px none rgb(51, 51, 51);
+    font: normal normal normal 18px/28.6875px Merriweather, sans-serif;
+    list-style: none outside none;
+    margin: 0px;
+    outline: rgb(51, 51, 51) none 0px;
+    padding: 0px;
+}/*#UL_3*/
+
+#LI_4, #LI_5 {
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 0px;
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    height: 3px;
+    text-decoration: none solid rgb(51, 51, 51);
+    width: 25px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(51, 51, 51);
+    border-radius: 2px 2px 2px 2px;
+    font: normal normal normal 18px/28.6875px Merriweather, sans-serif;
+    list-style: none outside none;
+    margin: 3px 0px;
+    outline: rgb(51, 51, 51) none 0px;
+}/*#LI_4, #LI_5*/
+
+#LI_6 {
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 0px;
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    height: 3px;
+    text-decoration: none solid rgb(51, 51, 51);
+    width: 25px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(51, 51, 51);
+    border-radius: 2px 2px 2px 2px;
+    font: normal normal normal 18px/28.6875px Merriweather, sans-serif;
+    list-style: none outside none;
+    margin: 3px 0px;
+    outline: rgb(51, 51, 51) none 0px;
+}/*#LI_6*/
+
