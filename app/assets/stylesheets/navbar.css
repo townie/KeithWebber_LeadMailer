@@ -3,6 +3,9 @@ body {
     opacity:0.65;
 }
 
+.navbar-brand{
+    background: white;
+}
 
 #DIV_1 {
     box-sizing: border-box;
@@ -10,7 +13,7 @@ body {
     cursor: pointer;
     height: 30px;
     position: fixed;
-    right: 40px;
+    left: 40px;
     text-decoration: none solid rgb(51, 51, 51);
     top: 35px;
     width: 92px;

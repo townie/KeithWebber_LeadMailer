@@ -17,19 +17,23 @@
     <div class="inner-wrap">
 
     <div id="DIV_1">
-      <a  id="H2_2" class="right-off-canvas-toggle" href="#" >Menu</a>
+
       <ul id="UL_3">
-        <li id="LI_4">
+        <li id="LI_4" class="left-off-canvas-toggle" ><a href="left-off-canvas-toggle"></a>
         </li>
-        <li id="LI_5">
+        <li id="LI_5" class="left-off-canvas-toggle" ><a href="left-off-canvas-toggle"></a>
         </li>
-        <li id="LI_6">
+        <li id="LI_6" class="left-off-canvas-toggle" ><a href="left-off-canvas-toggle"></a>
         </li>
+            <a  id="H2_2" class="left-off-canvas-toggle" href="#" >Menu</a>
       </ul>
 
     </div>
 
-    <aside class="right-off-canvas-menu">
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><h2 class="navbar-brand">LeadMailer</h2></li>
+      </ul>
       <ul class="off-canvas-list">
         <% if user_signed_in? %>
           <li> <%= link_to "Templates", emailtemplates_path %></li>
