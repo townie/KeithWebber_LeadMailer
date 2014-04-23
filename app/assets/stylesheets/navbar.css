@@ -1,10 +1,19 @@
 body {
     background-image:url('chalkboard.jpg');
-    opacity:0.65;
+    opacity:0.69;
 }
 
 .navbar-brand{
     background: white;
+}
+
+.side-nav{
+    margin-top: 0;
+    right: 0px;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    z-index: 100;
 }
 
 #DIV_1 {
