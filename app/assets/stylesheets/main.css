@@ -121,7 +121,7 @@ h2 {
 	margin-top: 0;
 }
 .loading {
-	background: url('ico_loading.gif') no-repeat center center;
+
 }
 section {
 	min-width: 960px;
@@ -192,7 +192,7 @@ main {
 }
 
 /* Slide 2 */
-#slide-2 .bcg {background-image:url('bcg_slide-2.jpg')}
+#slide-2 .bcg {background: black;}
 #slide-2 .hsContent {
 	margin-left: -450px;
 	top: auto;

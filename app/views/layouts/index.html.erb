@@ -10,19 +10,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-       <%= stylesheet_link_tag  "normalize.css" %>
-       <%= stylesheet_link_tag "main.css" %>
-       <% javascript_include_tag "vendor/modernizr-41eb398b16ec9c9d5be903b14ad8b06c.js" %>
+       <%= stylesheet_link_tag  "parac" %>
+
+       <% javascript_include_tag "modernizr" %>
         <style type="text/css">
       body {
         font-family: 'Open Sans', sans-serif;
       }
     </style>
     </head>
+
     <body class="loading">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+
+
+
 
         <div id="preload">
           <%= image_tag "bcg_slide-2.jpg" %>
@@ -31,13 +32,9 @@
         </div>
 
         <main>
-
-
           <section id="slide-1" class="homeSlide">
-            <div style="position: relative; z-index: 0; width: 100%; height: 100%">
-                <iframe frameborder="0" height="100%" width="100%"
-                  src="//www.youtube-nocookie.com/embed/lN5DFVSpPJA?autoplay=1&controls=0&showinfo=0&autohide=0&loop=true&disablekb=1&modestbranding=0&playsinline=1&rel=0">
-                </iframe>
+            <div style="position: relative; z-index: 0; width: 100%; height: 100%"  id="player">
+
               </div>
             <div class="bcg"
               data-center="background-position: 50% 0px;"
@@ -58,8 +55,7 @@
           data-center="background-position: 50% 10px;"
           data-top-bottom="background-position: 50% -100px;"
           data-bottom-top="background-position: 50% 100px;"
-          data-anchor-target="#slide-2"
-        >
+          data-anchor-target="#slide-2" >
             <div class="hsContainer">
               <div class="hsContent"
                 data-center="opacity: 1"
@@ -119,8 +115,45 @@
     </main>
       <%= javascript_include_tag "para" %>
 
+    <script>
+
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'lN5DFVSpPJA?controls=0&enablejsapi=1&loop=1',
+          playerVars: {modestbranding: 1, showinfo: 0, loop: 1},
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.seekTo(15);
+        event.target.mute();
+      }
+
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 600000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
 
     </body>
 </html>
