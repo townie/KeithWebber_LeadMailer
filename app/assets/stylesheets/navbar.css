@@ -1,6 +1,35 @@
-body {
-    background-image:url('chalkboard.jpg');
-    opacity:0.69;
+/*.container {
+    background:url('chalkboard.jpg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height: auto;
+}*/
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#lp {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+
+}
+.panel {
+    opacity: .8;
+}
+
+.container{
+    margin-top: 10px;
 }
 
 .navbar-brand{

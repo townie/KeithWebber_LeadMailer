@@ -19,6 +19,7 @@ source 'https://rubygems.org'
   gem 'foundation-rails'
   gem 'formtastic'
 
+
   # Authentication
   gem 'devise'
   gem 'cancancan'

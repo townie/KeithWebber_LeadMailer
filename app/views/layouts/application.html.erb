@@ -12,6 +12,7 @@
   </head>
 
   <body>
+<%= image_tag "c.jpg", id: "bg" %>
 
   <div class="off-canvas-wrap sticky">
       <div class="inner-wrap">
@@ -66,9 +67,10 @@
         <%= yield %>
       </div>
       </div>
+      </div>
     </div>
 
-  </div>
+
 
 </div>
     <%= javascript_include_tag "application" %>
