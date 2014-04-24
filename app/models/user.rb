@@ -32,6 +32,12 @@ class User < ActiveRecord::Base
                                                      :fixed_or_mobile]
                                             }
 
+  def full_name
+    first_name << ' ' << last_name
+  end
+
+
+
   def self.find_for_oauth(auth, signed_in_resource = nil)
     # Get the identity and user if they exist
     identity = Identity.find_for_oauth(auth)

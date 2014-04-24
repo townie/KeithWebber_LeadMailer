@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Lead Mailer" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,33 +12,32 @@
   </head>
 
   <body>
+<%= image_tag "c.jpg", id: "bg" %>
 
-  <div class="contain-to-grid sticky" data-options="sticky_on: large">
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="/">LeadMailer</a></h1>
-        </li>
-         <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  <div class="off-canvas-wrap sticky">
+      <div class="inner-wrap">
 
+
+
+    <aside class="left-off-canvas-menu" >
+    <div class='side-nav'>
+      <ul class="off-canvas-list" id='navbarsticky'>
+         <li><h2 class="navbar-brand">LeadMailer</h2></li>
+        <% if user_signed_in? %>
+          <li> <%= link_to "Templates", emailtemplates_path %></li>
+          <li> <%= link_to "Campaigns", campaigns_path %> </li>
+          <li> <%= link_to "Contacts", users_contacts_path %></li>
+          <li class="active"> <%= link_to current_user.full_name, edit_user_registration_path %></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li class="active"> <%= link_to "Register", new_user_registration_path %></li>
+          <li> <%= link_to "Log In", new_user_session_path %></li>
+        <% end %>
       </ul>
+    </div>
+    </aside>
 
-      <section class="top-bar-section">
-        <ul class="right">
-          <% if user_signed_in? %>
-            <li> <%= link_to "Templates", emailtemplates_path %></li>
-            <li> <%= link_to "Campaigns", campaigns_path %></li>
-            <li> <%= link_to "Contacts", users_contacts_path %></li>
-            <li class="active"> <%= link_to current_user.first_name, edit_user_registration_path %></li>
-            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li class="active"> <%= link_to "Register", new_user_registration_path %></li>
-            <li> <%= link_to "Log In", new_user_session_path %></li>
-          <% end %>
-        </ul>
-      </section>
-    </nav>
-  </div>
+
 
     <% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
@@ -48,14 +47,32 @@
         </div>
       <% end %>
     <% end %>
-    <br>
 
+<div class='container'>
     <div class="row">
       <div class="small-12 columns">
+          <div id="DIV_1">
+      <a id="H2_2" class="left-off-canvas-toggle" href="#">Menu</a>
+      <ul id="UL_3">
+        <li id="LI_4" class="left-off-canvas-toggle" ><a href="left-off-canvas-toggle"></a>
+        </li>
+        <li id="LI_5" class="left-off-canvas-toggle" ><a href="left-off-canvas-toggle"></a>
+        </li>
+        <li id="LI_6" class="left-off-canvas-toggle" ><a href="left-off-canvas-toggle"></a>
+        </li>
+      </ul>
+    </div>
+
+      <div class='panel'>
         <%= yield %>
+      </div>
+      </div>
       </div>
     </div>
 
+
+
+</div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

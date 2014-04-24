@@ -4,7 +4,9 @@ LeadMailer::Application.routes.draw do
 
   # devise_for :users
 
-  root to: "pages#index"
+  root to: "pages#chelsea"
+
+  get '/landing', to: 'pages#index', as: 'landing'
 
   devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks',:registrations => "registrations" }
   # devise_for :users, :controllers => {  }

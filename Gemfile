@@ -7,8 +7,8 @@ source 'https://rubygems.org'
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
   gem 'jquery-rails'
-  gem 'turbolinks'
   gem 'jbuilder', '~> 1.2'
+  gem 'font-awesome-sass'
 
   group :production do
     gem 'rails_12factor'
@@ -18,6 +18,7 @@ source 'https://rubygems.org'
   gem 'simple_form'
   gem 'foundation-rails'
   gem 'formtastic'
+
 
   # Authentication
   gem 'devise'
