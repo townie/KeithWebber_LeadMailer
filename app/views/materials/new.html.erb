@@ -1,4 +1,44 @@
+<h1>Fill In Content</h1>
 
-
-
-<%= render 'form' %>
+<div class="row">
+<%= simple_form_for  @material do |f| %>
+<div class="medium-3 columns">
+  <div class="medium-12 columns">
+  <%= f.input :title, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field1, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field2, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field3, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field4, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field5, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field6, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field7, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field8, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field9, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.input :field10, placeholder: "Example: March's Newsletter, One-Day Sale" %>
+  </div>
+  <div class="medium-12 columns">
+  <%= f.submit class: "button success"%>
+  </div>
+</div>
+<% end %>
+</div>

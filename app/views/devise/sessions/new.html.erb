@@ -1,15 +1,24 @@
-<h2>Sign in</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true, label: "Email"%>
-    <%= f.input :password, required: true %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<div class="row">
+  <div class="medium-6 columns">
+  <h2 class="bodyheader">Sign in</h2>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="small-12 medium-12 columns">
+        <%= f.input :email, required: true, autofocus: true, label: "Email", placeholder: "youremail@example.com" %>
+      </div>
+      <div class="small-12 medium-12 columns">
+        <%= f.input :password, required: true %>
+      </div>
+      <div class="small-12 medium-12 columns">
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+
+      <div class="small-12 medium-12 columns">
+        <%= f.button :submit, "Sign in", class: "button disabled" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign in" %>
-  </div>
-<% end %>
-
-<%= link_to "Sign in with LinkedIn", user_omniauth_authorize_path(:linkedin) %>
+<div class="small-12 medium-6 columns"></div>
+  <h2>Sign In with Linkedin</h2>
+  <%= link_to "", user_omniauth_authorize_path(:linkedin), class: 'login-linkedin' %>
+</div>

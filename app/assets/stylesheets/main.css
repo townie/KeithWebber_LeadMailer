@@ -35,6 +35,7 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+    background: black;
 }
 
 /*
@@ -175,9 +176,45 @@ main {
 		line-height: 38px;
 		margin-bottom: 12px;
 	}
+/*
+MODES- kw
+*/
+#bigger{
+  font-size: 55px;
+}
+  #MAKEITBIGGER{
+    margin-bottom: 40px;
+    font-size: 85px;
+    line-height: 58px;
+  }
+  #MAKEITTALLER {
+    margin-top: 10px;
+  }
+  #makeIT {
+    color: #f2ead6;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 5px;
+    line-height: 58px;
+    margin-bottom: 22px;
+    font-size: 85px;
+    font-style: bold;
+    color: white;
+  }
+  #adjust-tag-line {
+    margin-left: -30px;
+    margin-right: 40px;
+  }
+  /*
+}
+MODES- kw
+*/
 	.hsContent p {
-		width: 400px;
-		color: #b2b2b2;
+	  color: #fff8de;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 5px;
+    font-size: 20px;
+    line-height: 38px;
+    margin-bottom: 12px;
 	}
 	.hsContent a {
 		color: #b2b2b2;
@@ -187,7 +224,7 @@ main {
 /* Slide 1 */
 #slide-1 .bcg {background: black;}
 #slide-1 .hsContent {
-	bottom: 200px;
+	bottom: 100px;
 	top: auto;
 }
 
@@ -199,25 +236,33 @@ main {
 }
 #slide-2 h2 {
 	position: fixed;
-	top: 70%;
+	top: 80%;
+
 }
 
 /* Slide 3 */
-#slide-3 .bcg {background-image:url('bcg_slide-3.jpg')}
+#slide-3 .bcg {background-image:url('lp.jpg')}
 #slide-3 .hsContent {
 	margin-left: -239px;
 }
 	#slide-3 h2 {
+    position: fixed;
 		color: #f2ead6;
-		background-color: rgba(0,0,0,0.6);
+    top: 90%;
+
 	}
 
 /* Slide 4 */
-#slide-4 .bcg {background-image:url('bcg_slide-4.jpg')}
+#slide-4 .bcg {background: black;}
 #slide-4 .hsContent {
-	margin-left: -450px;
+	margin-left: -250px;
 	position: fixed;
 	top: 250px;
+}
+#slide-4 .hsContentRight {
+    margin-left: -450px;
+    position: fixed;
+    top: 100px;
 }
 	#slide-4 h2 {
 		background: none;
@@ -414,3 +459,59 @@ main {
         page-break-after: avoid;
     }
 }
+
+a.callButton {
+  margin: 10px;
+  width: 250px;
+  padding: 10px 25px 10px 25px;
+  font-family: Arial;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: -1px -1px 2px #618926;
+  background: -moz-linear-gradient(red, #a6c250 35%, red);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0, red),color-stop(.35, red),color-stop(1, red));
+  border: 1px solid black;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+a.callButton:hover {
+  text-shadow: -1px -1px 2px #465f97;
+  background: -moz-linear-gradient(#98ba40, #a6c250 35%, #618926);
+   background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #98ba40),color-stop(.35, #a6c250),color-stop(1, #618926));
+  border: 1px solid #0f2557;
+}
+
+
+a.logButton {
+  width: 250px;
+  padding: 10px 25px 10px 25px;
+  font-family: Arial;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: -1px -1px 2px #618926;
+  background: -moz-linear-gradient(#98ba40, #a6c250 35%, #618926);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #98ba40),color-stop(.35, #a6c250),color-stop(1, #618926));
+  border: 1px solid #618926;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+
+.login-linkedin{
+
+    background-image: url('linkedin.jpg');
+    background-size: 300px 100px;
+    background-repeat: no-repeat;
+    padding-top: -20px;
+    padding-right: 300px;
+    padding-bottom: 100px;
+    height:100px;
+    width:300px;
+    color: #eaeaea;
+}
+

@@ -4,7 +4,7 @@ LeadMailer::Application.routes.draw do
 
   # devise_for :users
 
-  root to: "pages#chelsea"
+  root to: "pages#index"
 
   get '/landing', to: 'pages#index', as: 'landing'
 

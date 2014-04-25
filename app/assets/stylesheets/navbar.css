@@ -6,6 +6,27 @@
   background-size: cover;
     height: auto;
 }*/
+ #contacts-style{
+    background: black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+}
+.panel {
+    margin-top: 48px;
+    font: normal normal normal 18px/28.6875px Merriweather, sans-serif;
+    color: white;
+    box-shadow: 10px 10px 5px #414247;
+    border:2px solid;
+    border-radius:25px;
+}
+
+#boss{
+    padding-top: 20px;
+}
+
+#submiting{
+    margin-top: 10px;
+}
 
 #bg {
   position: fixed;
@@ -30,6 +51,7 @@
 
 .container{
     margin-top: 10px;
+    border: 5px red;
 }
 
 .navbar-brand{
@@ -45,7 +67,7 @@
     z-index: 100;
 }
 
-#DIV_1 {
+#div-nav-head-1{
     box-sizing: border-box;
     color: rgb(51, 51, 51);
     cursor: pointer;
@@ -62,7 +84,7 @@
     transition: all 0.34s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
 }/*#DIV_1*/
 
-#H2_2 {
+#a-nav-title {
     box-sizing: border-box;
     color: rgb(255, 255, 255);
     cursor: pointer;
@@ -79,7 +101,10 @@
     outline: rgb(255, 255, 255) none 0px;
 }/*#H2_2*/
 
-#UL_3 {
+
+
+
+#ul-hanger-1 {
     box-sizing: border-box;
     clear: both;
     color: rgb(51, 51, 51);
@@ -96,6 +121,10 @@
     outline: rgb(51, 51, 51) none 0px;
     padding: 0px;
 }/*#UL_3*/
+
+
+
+
 
 #LI_4, #LI_5 {
     box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 0px;
@@ -131,3 +160,75 @@
     outline: rgb(51, 51, 51) none 0px;
 }/*#LI_6*/
 
+#div-nav-head-2{
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    height: 300px;
+    position: relative;
+    left: 100px;
+    text-decoration: none solid rgb(51, 51, 51);
+    top: 350px;
+    width: 202px;
+    z-index: 0;
+    border: 10px none rgb(51, 51, 51);
+    font: normal normal normal 18px/28.6875px Merriweather, sans-serif;
+    outline: rgb(51, 51, 51) none 0px;
+
+}/*#DIV_1*/
+
+
+
+
+
+
+#UL_nav{
+    top: 35px;
+
+    box-sizing: border-box;
+    clear: both;
+    list-style-type:none;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    display: inline;
+    height: 30px;
+    text-decoration: none solid rgb(51, 51, 51);
+    vertical-align: top;
+
+    width: 25px;
+    border: 0px none rgb(51, 51, 51);
+    font: normal normal normal 18px/28.6875px Merriweather, sans-serif;
+    text-align: center;
+
+    margin: 0px;
+    outline: rgb(51, 51, 51) none 0px;
+    padding: 0px;
+
+}
+
+.nav-page-li{
+    top: 35px;
+    float:left;
+}
+
+.navbar-back{
+    top: 35px;
+    background: black;
+    background-size: auto 20px;
+}
+
+.navbar-page {
+        font: normal normal 900 20px/20px Karla, Arial, sans-serif;
+
+    position: relative;
+    top: 25px;
+    list-style-type:none;
+    margin:0;
+    padding-bottom: 27px;
+    overflow:hidden;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    display:block;
+    width: 100%;
+    padding-left: 10px;
+}
