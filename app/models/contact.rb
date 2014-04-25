@@ -18,7 +18,7 @@ class Contact < ActiveRecord::Base
       potential_contact.first_name = lead[:first_name]
       potential_contact.last_name = lead[:last_name]
       potential_contact.email = lead[:email]
-      potential_contact.note = "Added From #{current_user.email}'s' Gmail"
+      potential_contact.note = "Gmail Import"
       if potential_contact.save
         new_contact << potential_contact
       else
