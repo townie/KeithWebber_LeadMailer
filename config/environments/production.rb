@@ -1,18 +1,16 @@
 LeadMailer::Application.configure do
 
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.default_url_options = { :host => config.app_domain }
-  # config.action_mailer.smtp_settings = {
-  #   address: 'smtp.gmail.com',
-  #   port: '587',
-  #   enable_starttls_auto: true,
-  #   user_name: '',
-  #   password: '',
-  #   authentication => :plain,
-  #   domain => 'somedomain.com'
-  # }
 
+  config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :address   => "smtp.mandrillapp.com",
+      :port      => 2525, # ports 587 and 2525 are also supported with STARTTLS
+      :enable_starttls_auto => true, # detects and uses STARTTLS
+      :user_name => ENV["MANDRILL_USERNAME"],
+      :password  => ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
+      :authentication => 'login', # Mandrill supports 'plain' or 'login'
+      :domain => 'leadmailer.herokuapp.com', # your domain to identify your server when connecting
+    }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -41,7 +39,7 @@ LeadMailer::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
