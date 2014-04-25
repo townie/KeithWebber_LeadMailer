@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require foundation
 
-//= require_tree .
+// =require vendor/modernizr
+
+// = require contacts
+// = require navbar
 
 $(function(){ $(document).foundation(); });
 
