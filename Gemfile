@@ -9,7 +9,7 @@ source 'https://rubygems.org'
   gem 'jquery-rails'
   gem 'jbuilder', '~> 1.2'
   gem 'font-awesome-sass'
-
+  gem 'dotenv-rails'
   group :production do
     gem 'rails_12factor'
   end
@@ -65,7 +65,7 @@ source 'https://rubygems.org'
     gem 'factory_girl_rails'
     #gem 'rack-mini-profiler'
     gem 'railroady'
-    gem 'dotenv-rails'
+
     gem 'spring'
   end
 
