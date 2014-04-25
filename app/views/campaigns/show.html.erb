@@ -1,10 +1,10 @@
-<%= link_to "Customize", new_material_path %>
+
 
 <ul class="pricing-table">
   <li class="title">Title: <%= @campaign.title %></li>
   <li class="price">Purpose: <%= @campaign.purpose %></li>
 </ul>
-
+<%= link_to "Add New Email Material", new_material_path, class: 'button' %>
 <h1>Material of campaign</h1>
 
 <table>
@@ -21,7 +21,7 @@
   </tr>
   <% end %>
 </table>
-
+<h1>Contacts Assocated with this Campaign</h1>
 <table>
   <tr>
     <td>Email</td>

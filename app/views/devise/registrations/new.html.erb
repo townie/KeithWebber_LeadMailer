@@ -1,22 +1,40 @@
 <h2>Sign up</h2>
 
+ <div class="row">
+ <div class="medium-6 columns">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-  <%= link_to "Sign up with LinkedIn", user_omniauth_authorize_path(:linkedin) %>
-    <%= f.input :first_name,  required: true,  autofocus: true %>
-    <%= f.input :last_name,   required: true  %>
-    <%= f.input :company,     required: true  %>
-    <%= f.input :phone_number_primary, required: true  %>
-    <%= f.input :email,       required: true %>
-    <%= f.input :password,    required: true %>
+    <div class="small-12 medium-12 columns">
+      <%= f.input :first_name,  required: true,  autofocus: true, placeholder: "John"%>
+    </div>
+    <div class="small-12 medium-12 columns">
+      <%= f.input :last_name,   required: true,  placeholder: "Smith"%>
+    </div>
+    <div class="small-12 medium-12 columns">
+       <%= f.input :company,   required: true, placeholder: "Acme Co." %>
+    </div>
+    <div class="small-12 medium-12 columns">
+      <%= f.input :phone_number_primary, required: true,  placeholder: "617-555-5555" %>
+    </div>
+    <div class="small-12 medium-12 columns">
+      <%= f.input :email,       required: true %>
+    </div>
+    <div class="small-12 medium-12 columns">
+      <%= f.input :password,       required: true %>
+    </div>
+    <div class= "small-12 medium-12 columns">
+     <%= f.button :submit, "Start For Free"  %>
+    </div>
 
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Start For Free" %>
-  </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+<div class="small-12 medium-6 columns"></div>
+<h2>Sign In with Linkedin</h2>
+ <%= link_to "", user_omniauth_authorize_path(:linkedin), class: 'login-linkedin' %>
+ </div>
+
+
+
+

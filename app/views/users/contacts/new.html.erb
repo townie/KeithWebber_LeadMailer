@@ -1,8 +1,4 @@
 
-<%= link_to "Import contacts from Hotmail", '/contacts/hotmail', class: "button   alert" %>
-<%= link_to "Import contacts from Gmail", '/contacts/gmail', class: "button   alert" %>
-
-
 <%= simple_form_for [current_user, @contact ], url: users_contacts_path do |f| %>
   <div class="row">
     <div class="small-12 medium-12 columns">
@@ -18,6 +14,9 @@
 
     <div class="small-12 medium-12 columns">
       <%= f.input :phone_number,       placeholder: "Example Co" %>
+    </div>
+    <div class="small-12 medium-12 columns">
+      <%= f.input :note,       placeholder: "Long Time Customer" %>
     </div>
     <div class="small-12 medium-12 columns">
       <%= f.submit "Add new contact", class: "button [secondary success alert]" %>

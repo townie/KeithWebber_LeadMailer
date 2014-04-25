@@ -63,7 +63,7 @@ source 'https://rubygems.org'
     gem 'rspec-rails'
     gem 'pry'
     gem 'factory_girl_rails'
-
+    #gem 'rack-mini-profiler'
     gem 'railroady'
     gem 'dotenv-rails'
     gem 'spring'

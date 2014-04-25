@@ -26,28 +26,29 @@
 
 
         <div id="preload">
-          <%= image_tag "bcg_slide-2.jpg" %>
-          <%= image_tag "bcg_slide-3.jpg" %>
-          <%= image_tag "bcg_slide-4.jpg" %>
+
+          <%= image_tag "lp.jpg" %>
+
         </div>
 
         <main>
           <section id="slide-1" class="homeSlide">
-            <div style="position: relative; z-index: 0; width: 100%; height: 100%"  id="player">
 
-              </div>
             <div class="bcg"
-              data-center="background-position: 50% 0px;"
+              data-center="background-position: 20% 0px;"
               data-top-bottom="background-position: 50% -100px;"
-              data-anchor-target="#slide-1"
-            >
+              data-anchor-target="#slide-1">
               <div class="hsContainer">
-
-              <div class="hsContent" data-center="bottom: 200px; opacity: 1" data-top="bottom: 1200px; opacity: 0" data-anchor-target="#slide-1 h2">
-                <h2>Welcome to Lead Mailer</h2>
+                <%= link_to 'Started For Free', new_user_registration_path, class: 'callButton' %>
+                <%= link_to 'Log In', new_user_session_path, class: 'logButton' %>
+                <div class="hsContent" data-center="bottom: 200px; opacity: 1" data-top="bottom: 1200px; opacity: 0" data-anchor-target="#slide-1 h2">
+                <h2>Lead Mailer</h2>
+                <%= link_to 'Get Started Today', new_user_registration_path, class: 'ghost-button' %>
               </div>
               </div>
             </div>
+            <div style="position: relative;  width: 100%; height: 100%"  id="player">
+              </div>
         </section>
 
       <section id="slide-2" class="homeSlide">
@@ -58,12 +59,12 @@
           data-anchor-target="#slide-2" >
             <div class="hsContainer">
               <div class="hsContent"
-                data-center="opacity: 1"
-                data-center-top="opacity: 0"
-                data--100-bottom="opacity: 0;"
-                data-anchor-target="#slide-2"
-              >
-                <h2>great for story telling websites.</h2>
+                data-670-top="opacity: .1 ;"
+                data-center-top="opacity: 1;"
+                data--100-bottom="opacity: 1;"
+                data-anchor-target="#slide-2">
+                <h2 id="MAKEITBIGGER">Reach more customers</h2>
+                <p id='makeIT'>Super Simple</p>
               </div>
             </div>
         </div>
@@ -74,17 +75,17 @@
           data-center="background-position: 50% 0px;"
           data-top-bottom="background-position: 50% -100px;"
           data-bottom-top="background-position: 50% 100px;"
-          data-anchor-target="#slide-3"
-        >
+          data-anchor-target="#slide-3" >
             <div class="hsContainer">
             <div class="hsContent"
-              data--50-bottom="opacity: 0;"
+              data--0-top="opacity: 1;"
               data--200-bottom="opacity: 1;"
               data-center="opacity: 1"
               data-200-top="opacity: 0"
-              data-anchor-target="#slide-3 h2"
-            >
-                <h2>Now go and create your own story</h2>
+              data-anchor-target="#slide-3 h2" >
+                <h2 id="MAKEITTALLER">Simple Email Marketing</h2>
+                <p id='bigger'>Get started to <strong>Today</strong> with your first email marketing campaign.</p>
+
               </div>
             </div>
 
@@ -96,17 +97,25 @@
           data-center="background-position: 50% 0px;"
           data-top-bottom="background-position: 50% -100px;"
           data-bottom-top="background-position: 50% 100px;"
-          data-anchor-target="#slide-4"
-        >
+          data-anchor-target="#slide-4">
             <div class="hsContainer">
+               <%= link_to 'Started For Free', new_user_registration_path, class: 'callButton' %>
+               <%= link_to 'Log In', new_user_session_path, class: 'logButton' %>
             <div class="hsContent"
               data-bottom-top="opacity: 0"
               data-25p-top="opacity: 0"
               data-top="opacity: 1"
-              data-anchor-target="#slide-4"
-            >
-                <h2>and share mine.</h2>
+              data-anchor-target="#slide-4">
+
+                <h2 id='adjust-tag-line'>See What Lead Mailer Can Do For Your Business</h2>
+                <iframe width="560" height="315" src="//www.youtube.com/embed/eMFbrxkB12g?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+
               </div>
+
+
+
             </div>
 
           </div>
@@ -129,8 +138,8 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'lN5DFVSpPJA?controls=0&enablejsapi=1&loop=1',
-          playerVars: {modestbranding: 1, showinfo: 0, loop: 1},
+          videoId: '8VFjKeOKrxE',
+          playerVars: {modestbranding: 1, showinfo: 0, autoplay: 1, controls: 0, enablejsapi:1,  rel: 0, loop: 1, playlist: '8VFjKeOKrxE' },
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
@@ -139,20 +148,15 @@
       }
 
       function onPlayerReady(event) {
-        event.target.seekTo(15);
+        event.target.playVideo();
         event.target.mute();
       }
 
-      var done = false;
       function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 600000);
-          done = true;
-        }
+        event.target.playVideo();
+        event.target.mute();
       }
-      function stopVideo() {
-        player.stopVideo();
-      }
+
     </script>
 
     </body>
