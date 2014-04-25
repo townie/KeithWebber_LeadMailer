@@ -38,7 +38,7 @@ source 'https://rubygems.org'
   gem 'foreman'
   gem 'sinatra', require: false
   gem 'slim'
-  # gem 'sendgrid'
+
   gem 'mandrill-api'
 
 
