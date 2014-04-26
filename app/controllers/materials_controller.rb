@@ -24,7 +24,7 @@ class MaterialsController < ApplicationController
 
   def edit
     @material = current_user.materials.find(params[:id])
-    if !@material.email_template_id.nil?
+    if !@material.email_template.nil?
       filename= @material.email_template.filename
     else
       filename = 'email1'
