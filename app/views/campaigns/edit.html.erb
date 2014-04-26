@@ -1,13 +1,19 @@
+
 <div class='row'>
   <div class="small-12 medium-12 columns" id= "contacts-style">
   <%= render 'users/contacts/navbar', id:"boss" %>
   </div>
 </div>
-<br>
-<br>
+
+<div class='row'>
+  <div class="small-12 medium-12 columns">
+    <input type="search" id="searchContacts" placeholder="Search Contacts">
+  </div>
+</div>
+
 <p>Select contacts to add to this campaign</p>
 
 <%= simple_form_for @campaign do |f| %>
-  <%= f.association :contacts,  collection: @contacts, label_method: :email, value_method: :id, as: :check_boxes %>
+  <%= f.association :contacts,  collection: @contacts, label_method: :email, value_method: :id, as: :check_boxes, id: 'email' %>
   <%= f.submit "Add contact", class: "button" %>
 <% end %>

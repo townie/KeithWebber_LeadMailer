@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
   # Standard Library Gems
   gem 'rails', '4.1.0'
   gem 'pg'
@@ -12,6 +13,7 @@ source 'https://rubygems.org'
   gem 'dotenv-rails'
   group :production do
     gem 'rails_12factor'
+
   end
 
   # Front end UI gems
@@ -38,18 +40,18 @@ source 'https://rubygems.org'
   gem 'foreman'
   gem 'sinatra', require: false
   gem 'slim'
+  gem 'unicorn'
 
-  gem 'mandrill-api'
 
 
   # Email related gems
   gem 'mail'
-  # need to add?!??!
-  #gem 'sidekiq_mailer'
+  gem 'mandrill-api'
 
-  #gem 'mailcatcher' ---< DONT ADD
+
+  #gem 'mailcatcher' Only for reference
   #gem 'email_spec' <<<< test?S?S
-  # gem "mailman" --< incoming mail
+  #gem "mailman" --< incoming mail
 
   group :doc do
     gem 'sdoc', require: false
