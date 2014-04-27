@@ -1,8 +1,12 @@
-<h1>Fill In Content</h1>
-
 <div class="row">
+  <div class="medium-8 columns">
+  <div id='email-preview'>
+    <%= render @emailtemplate , collection: @material %>
+  </div>
+  </div>
+
 <%= simple_form_for  @material do |f| %>
-<div class="medium-3 columns">
+<div class="medium-4 columns">
   <div class="medium-12 columns">
   <%= f.input :title, placeholder: "Example: March's Newsletter, One-Day Sale" %>
   </div>

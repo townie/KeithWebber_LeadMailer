@@ -24,7 +24,7 @@ class EmailTemplatesController < ApplicationController
     @email_template = "emailblast/#{filename}"
     @material = Material.first
 
-    session[:template_customize] = @emailtemplates.first.id
+    session[:template_customize] = @emailtemplates.first
   end
 
   protected

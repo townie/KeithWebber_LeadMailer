@@ -17,9 +17,15 @@ class MaterialsController < ApplicationController
   def new
     @material = Material.new
     @campaign = Campaign.find(session[:current_campaign])
-    if session[:template_customize].present?
-      @material.email_template = EmailTemplate.find(session[:template_customize])
+    # if session[:template_customize].present?
+    #   @material.email_template = EmailTemplate.find(session[:template_customize])
+    # end
+    if !@material.email_template.nil?
+      filename= @material.email_template.filename
+    else
+      filename = 'email1review'
     end
+    @emailtemplate = "emailblast/#{filename}"
   end
 
   def edit
@@ -27,7 +33,7 @@ class MaterialsController < ApplicationController
     if !@material.email_template.nil?
       filename= @material.email_template.filename
     else
-      filename = 'email1'
+      filename = 'email1review'
     end
     @emailtemplate = "emailblast/#{filename}"
   end
