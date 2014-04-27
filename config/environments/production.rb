@@ -1,5 +1,5 @@
 LeadMailer::Application.configure do
-
+config.gem 'redis'
 
   config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {

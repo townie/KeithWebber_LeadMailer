@@ -1,5 +1,5 @@
 LeadMailer::Application.configure do
-
+config.gem 'redis'
   OmniAuth.config.on_failure = Proc.new { |env| OmniAuth::FailureEndpoint.new(env).redirect_to_failure }
 
   config.action_mailer.perform_deliveries = true
