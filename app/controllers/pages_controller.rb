@@ -3,7 +3,8 @@ class PagesController < ApplicationController
    render :layout => "index"
   end
 
-  def chelsea
-
+  def home
+    @campaigns = current_user.campaigns
+    @materials = current_user.materials
   end
 end

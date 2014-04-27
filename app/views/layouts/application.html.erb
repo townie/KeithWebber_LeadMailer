@@ -45,34 +45,34 @@
 
 
     <div class='container'>
-    <div class="row">
-    <div class="small-12 columns">
+      <div class="row">
+        <div class="small-12 columns">
 
-    <div id="div-nav-head-1" >
-    <a id="a-nav-title" class="left-off-canvas-toggle" href="#">Menu</a>
-    <ul id="ul-hanger-1">
-    <li id="LI_4" class="left-off-canvas-toggle" >
-    <a href="left-off-canvas-toggle"></a>
-    </li>
-    <li id="LI_5" class="left-off-canvas-toggle" >
-    <a href="left-off-canvas-toggle"></a>
-    </li>
-    <li id="LI_6" class="left-off-canvas-toggle" >
-    <a href="left-off-canvas-toggle"></a>
-    </li>
-    </ul>
-    </div>
-
-
-    <%= render 'navbar' %>
-    <div class="panel">
-    <%= yield %>
-    </div>
-    </div>
-    </div>
-    </div>
+          <div id="div-nav-head-1" >
+            <a id="a-nav-title" class="left-off-canvas-toggle" href="#">Menu</a>
+              <ul id="ul-hanger-1">
+                <li id="LI_4" class="left-off-canvas-toggle" >
+                  <a href="left-off-canvas-toggle"></a>
+                </li>
+                <li id="LI_5" class="left-off-canvas-toggle" >
+                  <a href="left-off-canvas-toggle"></a>
+                </li>
+                <li id="LI_6" class="left-off-canvas-toggle" >
+                  <a href="left-off-canvas-toggle"></a>
+                </li>
+              </ul>
+          </div>
 
 
+          <%= render 'navbar' %>
+          <div class="panel">
+             <%= yield %>
+          </div>
+        </div>
+     </div>
+    </div>
+
+  </div>
 
     </div>
     <%= javascript_include_tag "application" %>

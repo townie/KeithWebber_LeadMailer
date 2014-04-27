@@ -1,0 +1,56 @@
+
+<div class='row'>
+  <div class="small-12 medium-12 columns">
+    <h1>Learn what Lead Mailer can do for <strong>Your</strong> business</h1>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/eMFbrxkB12g?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+    <div class="small-12 medium-6  columns">
+
+      <table>
+        <tr>
+          <td>Title</td>
+          <td>Purpose</td>
+          <td>History</td>
+          <td>Contacts</td>
+        </tr>
+        <% @campaigns.each do |campaign| %>
+          <tr>
+            <td>
+              <%= campaign.title %>
+            </td>
+            <td>
+              <%= campaign.purpose %>
+            </td>
+            <td>
+              <%= link_to "See results", campaign_path(campaign) %>
+            </td>
+            <td>
+              <%= link_to "Add contacts", edit_campaign_path(campaign) %>
+            </td>
+          </tr>
+        <% end %>
+      <table>
+    </div>
+
+ <div class="small-12 medium-6 columns">
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>1</th>
+        </tr>
+        <% @materials.each do |mat| %>
+          <tr>
+            <td>
+              <%= mat.title %>
+            </td>
+            <td>
+              <%= mat.field1 %>
+            </td>
+          </tr>
+        <% end %>
+      <table>
+  </div>
+</div>
+
+
