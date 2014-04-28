@@ -1,39 +1,32 @@
 
 <div class='row'>
-  <div class="small-12 medium-12 columns">
-    <h1>Learn what Lead Mailer can do for <strong>Your</strong> business</h1>
-    <iframe width="560" height="315" src="//www.youtube.com/embed/eMFbrxkB12g?rel=0" frameborder="0" allowfullscreen></iframe>
+
+  <div class="small-12 medium-8 medium-centered columns">
+<h1>Lead Mailer can do for <strong>Your</strong> business</h1>
+ <iframe align="middle"  width="560" height="315" src="//www.youtube.com/embed/eMFbrxkB12g?rel=0" frameborder="10px" ></iframe>
   </div>
 </div>
-    <div class="small-12 medium-6  columns">
 
-      <table>
-        <tr>
-          <td>Title</td>
-          <td>Purpose</td>
-          <td>History</td>
-          <td>Contacts</td>
-        </tr>
+<div class='row'>
+    <div class="small-12 medium-12 columns">
+
+    <hr>
+    <%= link_to 'Start New Campaign', new_campaign_path, class: 'button alert inline' %>
+    <%= link_to 'Add Contacts', new_users_contact_path, class: 'button alert inline' %>
+    <%= link_to 'Create New Email', new_material_path, class: 'button alert inline' %>
+    <%= link_to 'Create New Email', new_material_path, class: 'button alert inline' %>
+    <h1>Campaigns</h1>
         <% @campaigns.each do |campaign| %>
-          <tr>
-            <td>
-              <%= campaign.title %>
-            </td>
-            <td>
-              <%= campaign.purpose %>
-            </td>
-            <td>
-              <%= link_to "See results", campaign_path(campaign) %>
-            </td>
-            <td>
-              <%= link_to "Add contacts", edit_campaign_path(campaign) %>
-            </td>
-          </tr>
+            <hr>
+            <h1>Title: <%= campaign.title %></h1>
+            <h2>Purpose: <%= campaign.purpose %></h2>
+            <%= link_to "See results", campaign_path(campaign) %>
+            <%= link_to "Add contacts", edit_campaign_path(campaign) %>
         <% end %>
-      <table>
     </div>
+    <hr>
 
- <div class="small-12 medium-6 columns">
+ <div class="small-12 medium-12 columns">
       <table>
         <tr>
           <th>Title</th>
@@ -52,5 +45,5 @@
       <table>
   </div>
 </div>
-
+</div>
 

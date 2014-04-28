@@ -24,7 +24,7 @@
     <aside class="left-off-canvas-menu" >
       <div class='side-nav'>
         <ul class="off-canvas-list" id='navbarsticky'>
-          <li><h2 class="navbar-brand">LeadMailer</h2></li>
+          <li><h2 class="navbar-brand"><%= link_to 'LeadMailer', home_path %></h2></li>
           <% if user_signed_in? %>
             <li> <%= link_to "Materials", materials_path %></li>
             <li> <%= link_to "Templates", emailtemplates_path %></li>
